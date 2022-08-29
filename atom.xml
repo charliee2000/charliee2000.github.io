@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Charlie&#39;s Blog</title>
+  
+  <subtitle>這是副標題</subtitle>
+  <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://charliee2000.github.io/"/>
+  <updated>2022-08-27T01:52:19.675Z</updated>
+  <id>https://charliee2000.github.io/</id>
+  
+  <author>
+    <name>Charlie</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Notion] How to draw diagrams in notion with mermaid</title>
+    <link href="https://charliee2000.github.io/2022/08/26/20220825-3/"/>
+    <id>https://charliee2000.github.io/2022/08/26/20220825-3/</id>
+    <published>2022-08-25T16:07:13.000Z</published>
+    <updated>2022-08-27T01:52:19.675Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a><strong>[前言]</strong></h2><p>在開發的時候我常會用Notion來記錄開發的資訊</p><p>有次需要畫一個簡單的流程圖來釐清一下邏輯</p><p>發現Notion的code的編輯區有支援Mermaid的語法</p><p>使用後覺得非常好用而且很方便</p><br><span id="more"></span><p>官方介紹</p><blockquote><p>Mermaid is a JavaScript-based diagramming and charting tool that uses Markdown-inspired text definitions and a renderer to create and modify complex diagrams. The main purpose of Mermaid is to help documentation catch up with development.</p></blockquote><ul><li>透過簡單的語法把文字渲染成流程圖</li><li>簡單方便使用</li></ul><br><h2 id="Notion使用Mermaid"><a href="#Notion使用Mermaid" class="headerlink" title="Notion使用Mermaid"></a>Notion使用Mermaid</h2><h3 id="新增Code區塊"><a href="#新增Code區塊" class="headerlink" title="新增Code區塊"></a>新增Code區塊</h3><img src="/images/20220825/a0825_05.jpg" alt="a0825_05" style="zoom:50%;" /><br><h3 id="選擇Mermaid"><a href="#選擇Mermaid" class="headerlink" title="選擇Mermaid"></a>選擇Mermaid</h3><img src="/images/20220825/a0825_06.jpg" width="80%" height="80%"><br><h2 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a><strong>[Demo畫面]</strong></h2><h3 id="FlowChart-流程圖"><a href="#FlowChart-流程圖" class="headerlink" title="FlowChart 流程圖"></a>FlowChart 流程圖</h3><pre><code class="mermaid">flowchart LR %% TD(直排) or LR(橫排)%% 定義顏色classDef blue fill:#3567AB,stroke:#000,stroke-width:2px,color:#fffclassDef purple fill:#6C3365,stroke:#000,stroke-width:2px,color:#fffclassDef orange fill:#fc822b,stroke:#000,stroke-width:2px,color:#fffclassDef red fill:#DE3B25,stroke:#000,stroke-width:2px,color:#fffclassDef green fill:#1F4131,stroke:#000,stroke-width:2px,color:#fffclassDef yellow fill:#FEB847,stroke:#000,stroke-width:2px,color:#fffclassDef spindle fill:#B9D2F0,stroke:#000,stroke-width:2px,color:#fffclassDef pink fill:#DFC6DB,stroke:#000,stroke-width:2px,color:#fffclassDef white fill:white,stroke:#000,stroke-width:2px,color:black%% 先定義好區塊O((Start)):::spindleA(&quot;☪&quot; Project):::blueP([Page]):::orangeB[Upload]:::redC[Create Data]:::greenD[(DataBase)]:::purpleE((Stop)):::pinkF&#123;check&#125;:::yellow%% 利用嵌入html的技巧調整X[&quot;&lt;div style=&#39;color:black;font-size:20px;margin:10px&#39;&gt;Diagram&lt;/div&gt;&quot;]:::white%% 透過subgraph劃分區塊subgraph ProjectO--&gt;A-.-&gt;Pendsubgraph Inner-ProjectP--&gt;|trigger upload|BB--&gt;CC==&gt;|1|DD==&gt;|2|CC--&gt;|3.checking data|FF--&gt;|N|Eend%% 返回資料F--&gt;|Y:Return data &amp; show|P</code></pre><img src="/images/20220825/a0825_07.jpg" width="80%" height="80%"><h2 id="參考資訊"><a href="#參考資訊" class="headerlink" title="參考資訊"></a><strong>參考資訊</strong></h2><ul><li><a href="https://www.jinnsblog.com/2022/06/notion-flowchat-by-mermaid.html">[Notion] 利用 Mermaid 建立流程圖、甘特圖、圓餅圖等各式圖形</a></li><li><a href="https://mermaid-js.github.io/mermaid/#/">Mermaid - 官方文件</a></li><li><a href="https://www.redgregory.com/notion/2022/1/17/how-to-get-started-with-mermaid-in-notion">HOW TO GET STARTED WITH MERMAID IN NOTION</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;在開發的時候我常會用Notion來記錄開發的資訊&lt;/p&gt;
+&lt;p&gt;有次需要畫一個簡單的流程圖來釐清一下邏輯&lt;/p&gt;
+&lt;p&gt;發現Notion的code的編輯區有支援Mermaid的語法&lt;/p&gt;
+&lt;p&gt;使用後覺得非常好用而且很方便&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="Notion" scheme="https://charliee2000.github.io/categories/Notion/"/>
+    
+    
+    <category term="Mermaid" scheme="https://charliee2000.github.io/tags/Mermaid/"/>
+    
+    <category term="Notion" scheme="https://charliee2000.github.io/tags/Notion/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Hexo] How to generate README.md when hexo generate deploy to github</title>
+    <link href="https://charliee2000.github.io/2022/08/25/20220825-2/"/>
+    <id>https://charliee2000.github.io/2022/08/25/20220825-2/</id>
+    <published>2022-08-25T15:22:05.000Z</published>
+    <updated>2022-08-25T15:36:15.452Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a><strong>[前言]</strong></h2><p><a href="http://readme.md/"><code>README.md</code></a> 在產生repo的時候沒有新增</p><p>導致之後做deploy的時候都會把github上新產生的<code>README.md</code>給蓋掉</p><p>嘗試了幾種做法</p><br><span id="more"></span><h2 id="解法"><a href="#解法" class="headerlink" title="[解法]"></a><strong>[解法]</strong></h2><h3 id="1-skip-render"><a href="#1-skip-render" class="headerlink" title="1. skip_render"></a><strong>1. skip_render</strong></h3><p>新增一個<code>README.md</code>放在source的資料夾底下</p><p>並且在_config.yml中加入</p><p><code>skip_render: README.md</code></p><p>這樣可以讓hexo在做generate的時候忽略<code>README.md</code></p><p>不會把它轉成<code>README.html</code></p><p>但是我的主題<strong>Aomori</strong>似乎不管用</p><p>後來在StackOverFlow上找到另一種折衷的解法</p><br><h3 id="2-README-mdown"><a href="#2-README-mdown" class="headerlink" title="2. README.mdown"></a><strong>2. README.mdown</strong></h3><p>一樣先新增一個<code>README.mdown</code>放在source的資料夾底下</p><p>這樣就不會變成<code>README.html</code></p><br><p>Github上可以支援這種副檔名</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><p><img src="/images/20220825/a0825_04.jpg" alt="a0825_04.jpg"></p><br><h2 id="參考資訊"><a href="#參考資訊" class="headerlink" title="參考資訊"></a>參考資訊</h2><blockquote><p><a href="https://stackoverflow.com/questions/25258660/how-do-i-add-a-readme-md-file-into-the-root-directory-of-the-generated-blog-by-h/31051913#31051913">StackOverFlow - How do I add a README.md file into the root directory of the generated blog by HEXO?</a></p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://readme.md/&quot;&gt;&lt;code&gt;README.md&lt;/code&gt;&lt;/a&gt; 在產生repo的時候沒有新增&lt;/p&gt;
+&lt;p&gt;導致之後做deploy的時候都會把github上新產生的&lt;code&gt;README.md&lt;/code&gt;給蓋掉&lt;/p&gt;
+&lt;p&gt;嘗試了幾種做法&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://charliee2000.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Mac] How to add “Google Keep” to Mac OS like an app in docker</title>
+    <link href="https://charliee2000.github.io/2022/08/25/20220825/"/>
+    <id>https://charliee2000.github.io/2022/08/25/20220825/</id>
+    <published>2022-08-25T14:24:22.000Z</published>
+    <updated>2022-08-25T14:46:03.988Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a><strong>[前言]</strong></h2><p><a href="https://keep.google.com/"><font color=#daa520><strong>Google Keep</strong> </font></a>在2021 年初已經停用了對Chrome桌面版的支援</p><p>只剩下Web版跟手機版</p><p>作為一個常使用<font color=#daa520> <strong>Google Keep</strong> </font>來記錄一些瑣事的人</p><p>要一直打開瀏覽器再開啟網頁版真的是很痛苦</p><span id="more"></span><br><h2 id="桌面捷徑"><a href="#桌面捷徑" class="headerlink" title="[桌面捷徑]"></a><strong>[桌面捷徑]</strong></h2><p>後來發現了Chrome有保留把<font color=#daa520> <strong>Google Keep</strong> </font>作為桌面捷徑的方式(<code>只適用於Mac</code>)</p><br><h2 id="開啟之後的樣子"><a href="#開啟之後的樣子" class="headerlink" title="[開啟之後的樣子]"></a><strong>[開啟之後的樣子]</strong></h2><img src="/images/20220825/a0825_02.jpg" width="50%" height="50%"><br><h2 id="設置方式"><a href="#設置方式" class="headerlink" title="[設置方式]"></a><strong>[設置方式]</strong></h2><p>打開<a href="https://keep.google.com/"><font color=#daa520> <strong>Google Keep</strong> </font></a><br>在瀏覽器右上 ⋮ → 更多工具 → 建立捷徑</p><img src="/images/20220825/a0825_03.jpg" width="80%" height="80%"><p>這樣就新增完成了</p><p>可以獨立於Chrome獨自運作，看起來就像桌面程式一樣</p><br><h2 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a><strong>[Demo畫面]</strong></h2><img src="/images/20220825/a0825_01.jpg" width="50%" height="50%">]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://keep.google.com/&quot;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Mac" scheme="https://charliee2000.github.io/categories/Mac/"/>
+    
+    
+    <category term="Mac" scheme="https://charliee2000.github.io/tags/Mac/"/>
+    
+    <category term="Google Keep" scheme="https://charliee2000.github.io/tags/Google-Keep/"/>
+    
+    <category term="Chrome" scheme="https://charliee2000.github.io/tags/Chrome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Hexo] How to setup a simple comments in hexo blog</title>
+    <link href="https://charliee2000.github.io/2022/08/24/20220824/"/>
+    <id>https://charliee2000.github.io/2022/08/24/20220824/</id>
+    <published>2022-08-24T15:22:14.000Z</published>
+    <updated>2022-08-29T14:03:49.087Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a><strong>[前言]</strong></h2><blockquote><p>在Hexo上架設留言區</p><p>我個人使用的主題Aomori有支援多種留言的套件</p><p>以下為嘗試過的各種版本</p></blockquote><span id="more"></span><br><h3 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a><strong>Gitalk</strong></h3><blockquote><p>先是使用了Github出的Gitalk</p><p>使用上看起來很棒，但是在網址上有 #XXX 的頁面導航的情況很常出問題</p><p>明明是同一篇卻看不到之前的人的留言</p></blockquote><h3 id="Disqus"><a href="#Disqus" class="headerlink" title="Disqus"></a><strong>Disqus</strong></h3><blockquote><p>後來換成了Disqus，使用上非常的棒</p><p>支援多個平台登入留言</p><p>而且可以支援針對個別的留言搭樓層回覆</p><p>不過個人感覺..整體的排版有點太花了</p></blockquote><h3 id="utteranc"><a href="#utteranc" class="headerlink" title="utteranc"></a><strong>utteranc</strong></h3><blockquote><p>最後看到了utteranc</p><p>跟Gitalk相同是以Github的issue的方式留言</p><p>整體的使用上非常簡潔</p></blockquote><br>綜合以上所述，我最後選擇了utteranc<p>以下則是記錄了utteranc設定的過程</p><h2 id="utteranc留言區設置"><a href="#utteranc留言區設置" class="headerlink" title="[utteranc留言區設置]"></a><strong>[utteranc留言區設置]</strong></h2><h3 id="1-建立留言用的repo"><a href="#1-建立留言用的repo" class="headerlink" title="1. 建立留言用的repo"></a>1. 建立留言用的repo</h3><p>如果hexo是搭建在github上的也可以直接使用該repo</p><p>也可以創建一個新的</p><img src="/images/20220824/a01.jpg" width="50%" height="50%"><br><h3 id="2-安裝utteranc外掛"><a href="#2-安裝utteranc外掛" class="headerlink" title="2. 安裝utteranc外掛"></a>2. 安裝utteranc外掛</h3><p>安裝連結： <a href="https://github.com/apps/utterances">https://github.com/apps/utterances</a></p><p>點選install按鈕 <code>這邊已經安裝過了所以顯示的是Configure</code></p><p><img src="/images/20220824/a02.jpg" alt="a02.jpg"></p><p>這邊只要選擇要存放issue的留言的repo就好</p><p>選擇完後，點選左下角的install <code>這裡已經安裝過了所以顯示的是save</code></p><p><img src="/images/20220824/a03.jpg" alt="a03.jpg"></p><p>之後會被導向到說明的頁面 <a href="https://utteranc.es/">https://utteranc.es/</a></p><p><img src="/images/20220824/a04.jpg" alt="a04.jpg"></p><br><h3 id="3-增加script至comments-ejs"><a href="#3-增加script至comments-ejs" class="headerlink" title="3. 增加script至comments.ejs"></a>3. 增加script至comments.ejs</h3><p>最下方會看到產生script的區塊</p><p><img src="/images/20220824/a05.jpg" alt="a05.jpg"></p><p>repo填入你github的repo</p><pre><code class="javascript">&lt;script src=&quot;https://utteranc.es/client.js&quot;        repo=&quot;username/username.github.io&quot;        issue-term=&quot;pathname&quot;        theme=&quot;github-light&quot;        crossorigin=&quot;anonymous&quot;        async&gt;&lt;/script&gt;</code></pre><p>因為我這邊選擇的是Aomori主題，並沒有支援utteranc，所以需要這邊直接修改程式碼</p><p>要把這段script放入到<code>comments.ejs</code>中</p><p><strong>themes</strong>資料夾結構</p><pre><code>├── CHANGELOG.md├── LICENSE├── README.md├── docs├── languages├── layout│   ├── _partial│   │   ├── page│   │   ├── post│   │       ├── comments.ejs│   ├── _widget├── source│   ├── dist│   ├── javascripts│   ├── modules│   └── stylesheets└── stylelint.config.js</code></pre><p>直接貼在<code>comments.ejs</code>最下方即可</p><br><h2 id="增加-config-yml外部設置-optional"><a href="#增加-config-yml外部設置-optional" class="headerlink" title="[增加_config.yml外部設置 (optional)]"></a><strong>[增加_config.yml外部設置 (optional)]</strong></h2><p>如果想要在<code>_config.xml</code>增加設定檔</p><p>script可以這樣調整</p><h3 id="comments-ejs"><a href="#comments-ejs" class="headerlink" title="comments.ejs"></a>comments.ejs</h3><pre><code class="javascript">&lt;% if (config.utteranc_comment)&#123; %&gt;&lt;script src=&quot;https://utteranc.es/client.js&quot;        repo=&quot;&lt;%= config.utteranc_comment.repo || &#39;&#39; %&gt;&quot;        issue-term=&quot;pathname&quot;        theme=&quot;github-light&quot;        crossorigin=&quot;anonymous&quot;        async&gt;&lt;/script&gt;&lt;% &#125; %&gt;</code></pre><h3 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h3><pre><code>utteranc_comment:  repo: username/username.github.io</code></pre><h2 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a><strong>[Demo畫面]</strong></h2><p><img src="/images/20220824/a06.jpg" alt="a06.jpg"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;在Hexo上架設留言區&lt;/p&gt;
+&lt;p&gt;我個人使用的主題Aomori有支援多種留言的套件&lt;/p&gt;
+&lt;p&gt;以下為嘗試過的各種版本&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://charliee2000.github.io/tags/blog/"/>
+    
+    <category term="comments" scheme="https://charliee2000.github.io/tags/comments/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Hexo] How to build a blog by hexo deploy to github</title>
+    <link href="https://charliee2000.github.io/2022/08/23/20220823-2/"/>
+    <id>https://charliee2000.github.io/2022/08/23/20220823-2/</id>
+    <published>2022-08-23T08:52:28.000Z</published>
+    <updated>2022-08-24T01:14:01.007Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a>[前言]</h2><p>這篇文章主要記錄架設Hexo網誌並且快速部署到Githug的過程</p><p>從安裝、建立環境，以及hexo的一些常用指令</p><span id="more"></span><h2 id="Hexo介紹"><a href="#Hexo介紹" class="headerlink" title="[Hexo介紹]"></a>[Hexo介紹]</h2><blockquote><p><strong>Official:</strong> A fast, simple &amp; powerful blog framework, powered by Node.js.</p></blockquote><ul><li>支援Markdown語法</li><li>Hexo強大的外掛套件</li><li>支援快速部署至Github等平台</li></ul><h2 id="Mac-安裝Homebrew"><a href="#Mac-安裝Homebrew" class="headerlink" title="[Mac][安裝Homebrew]"></a>[Mac][安裝Homebrew]</h2><p><strong>以下安裝都會透過brew工具，所以必須要安裝</strong></p><p>官網：<a href="https://brew.sh/index_zh-tw">https://brew.sh/index_zh-tw</a></p><pre><code>$ /bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></pre><h2 id="安裝Node-js"><a href="#安裝Node-js" class="headerlink" title="[安裝Node.js]"></a>[安裝Node.js]</h2><pre><code>brew install node</code></pre><h2 id="安裝Git"><a href="#安裝Git" class="headerlink" title="[安裝Git]"></a>[安裝Git]</h2><pre><code>brew install git</code></pre><h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="[安裝Hexo]"></a>[安裝Hexo]</h2><pre><code>npm install hexo-cli -g</code></pre><p>安裝完成後可以輸入</p><p><code>hexo -v</code> 來查看版本，確認是否安裝成功</p><h2 id="初始化Hexo資料夾"><a href="#初始化Hexo資料夾" class="headerlink" title="[初始化Hexo資料夾]"></a>[初始化Hexo資料夾]</h2><pre><code>hexo init &lt;fold_name&gt;</code></pre><h2 id="安裝npm的套件"><a href="#安裝npm的套件" class="headerlink" title="[安裝npm的套件]"></a>[安裝npm的套件]</h2><pre><code>npm install</code></pre><h2 id="Hexo資料夾結構"><a href="#Hexo資料夾結構" class="headerlink" title="[Hexo資料夾結構]"></a>[Hexo資料夾結構]</h2><p>安裝完成後會看到以下結構</p><pre><code>├── _config.yml├── package.json├── scaffolds├── source|   ├── _drafts|   └── _posts└── themes</code></pre><p><code>_config.yml</code> 該檔案為修改各種配置跟設定</p><ul><li>官方文件：<a href="https://hexo.io/zh-tw/docs/configuration">https://hexo.io/zh-tw/docs/configuration</a></li></ul><p><code>themes</code></p><ul><li>存放主題的資料夾</li><li>Themes下載<ul><li><a href="https://hexo.io/themes/">https://hexo.io/themes/</a></li></ul></li></ul><p>個人使用的主題為<a href="https://github.com/lh1me/hexo-theme-aomori/releases">Aomori</a></p><h2 id="Hexo常用指令"><a href="#Hexo常用指令" class="headerlink" title="[Hexo常用指令]"></a>[Hexo常用指令]</h2><h3 id="新增文章"><a href="#新增文章" class="headerlink" title="新增文章"></a>新增文章</h3><pre><code>hexo new &quot;md檔名&quot;</code></pre><h3 id="清除public資料夾靜態檔案"><a href="#清除public資料夾靜態檔案" class="headerlink" title="清除public資料夾靜態檔案"></a>清除public資料夾靜態檔案</h3><pre><code>hexo clean</code></pre><p>可以簡寫成 <code>hexo c</code></p><h3 id="產生public資料夾靜態檔案"><a href="#產生public資料夾靜態檔案" class="headerlink" title="產生public資料夾靜態檔案"></a>產生public資料夾靜態檔案</h3><pre><code>hexo generate</code></pre><p>可以簡寫成 <code>hexo g</code></p><h3 id="啟動本地端伺服器"><a href="#啟動本地端伺服器" class="headerlink" title="啟動本地端伺服器"></a>啟動本地端伺服器</h3><pre><code>hexo server</code></pre><p>可以簡寫成 <code>hexo s</code></p><h3 id="新增一頁page"><a href="#新增一頁page" class="headerlink" title="新增一頁page"></a>新增一頁page</h3><pre><code>hexo new page &quot;page name&quot;</code></pre><h2 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h2><h3 id="註冊Github帳號並登入"><a href="#註冊Github帳號並登入" class="headerlink" title="註冊Github帳號並登入"></a>註冊<a href="https://github.com/">Github</a>帳號並登入</h3><h3 id="新增一個Repository專案"><a href="#新增一個Repository專案" class="headerlink" title="新增一個Repository專案"></a>新增一個Repository專案</h3><p><img src="/images/20220823/02.png" alt="02.png"></p><h3 id="將Repository-name取名為-username-github-io"><a href="#將Repository-name取名為-username-github-io" class="headerlink" title="將Repository name取名為 username.github.io"></a>將Repository name取名為 username.github.io</h3><p><img src="/images/20220823/03.jpg" alt="03.png"></p><p><a href="http://username.github.io/">username.github.io</a></p><p>之後就會是你網誌的連結</p><h2 id="將Hexo發布到Github"><a href="#將Hexo發布到Github" class="headerlink" title="[將Hexo發布到Github]"></a>[將Hexo發布到Github]</h2><h3 id="安裝hexo-git部署套件"><a href="#安裝hexo-git部署套件" class="headerlink" title="安裝hexo git部署套件"></a>安裝hexo git部署套件</h3><pre><code class="tsx">npm install hexo-deployer-git --save</code></pre><h3 id="修改-config-yml的部署設定"><a href="#修改-config-yml的部署設定" class="headerlink" title="修改_config.yml的部署設定"></a>修改_config.yml的部署設定</h3><pre><code class="tsx">deploy:  type: git  repo: https://github.com/username/username.github.io.git  branch: master</code></pre><h3 id="輸入部署指令"><a href="#輸入部署指令" class="headerlink" title="輸入部署指令"></a>輸入部署指令</h3><pre><code class="tsx">hexo deploy</code></pre><h2 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a>[Demo畫面]</h2><p><img src="/images/20220823/04.jpg" alt="04.png"></p><p>下一篇會介紹安裝主題的部分</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;[前言]&lt;/h2&gt;&lt;p&gt;這篇文章主要記錄架設Hexo網誌並且快速部署到Githug的過程&lt;/p&gt;
+&lt;p&gt;從安裝、建立環境，以及hexo的一些常用指令&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://charliee2000.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Hexo] How to add read more link in hexo blog</title>
+    <link href="https://charliee2000.github.io/2022/08/23/20220823/"/>
+    <id>https://charliee2000.github.io/2022/08/23/20220823/</id>
+    <published>2022-08-23T08:12:19.000Z</published>
+    <updated>2022-08-23T08:51:39.185Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a>[前言]</h3><p>Hexo使用的主題通常會在<code>&lt;!--more--&gt;</code>的斷點生成一個Read more的連結按鈕</p><p>但我這邊使用的<a href="https://github.com/lh1me/hexo-theme-aomori/releases">Aomori</a>並不支援直接增加Read more的連結</p><p>網路上查找之後發現沒有找到類似的外掛或是解法</p><p>所以後來直接在原始碼中做處理</p><span id="more"></span><p>以下為Aomori的themes的資料夾結構</p><h3 id="themes資料夾結構"><a href="#themes資料夾結構" class="headerlink" title="[themes資料夾結構]"></a>[themes資料夾結構]</h3><pre><code>├── CHANGELOG.md├── LICENSE├── README.md├── docs├── languages├── layout│   ├── _partial│   │   ├── article-index.ejs│   │   ├── page│   │   ├── post│   ├── _widget├── source│   ├── dist│   ├── javascripts│   ├── modules│   └── stylesheets└── stylelint.config.js</code></pre><p>找到article-index.ejs這個ejs, 透過編輯器打開之後可以看到</p><h3 id="修改前的source"><a href="#修改前的source" class="headerlink" title="[修改前的source]"></a>[修改前的source]</h3><pre><code class="html">...&lt;div class=&quot;article-body&quot;&gt;    &lt;header class=&quot;article-title&quot;&gt;        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;&lt;%= post.title %&gt;&lt;/a&gt;    &lt;/header&gt;    &lt;div class=&quot;article-entry post-inner-html&quot;&gt;        &lt;% if (post.excerpt)&#123; %&gt;        &lt;%- post.excerpt %&gt;        &lt;% &#125; else &#123; %&gt;        &lt;%- post.content %&gt;        &lt;% &#125; %&gt;    &lt;/div&gt;&lt;/div&gt;...</code></pre><p><code>post.excerpt</code> 指的是文章的摘要內容，也就是<code>&lt;!--more--&gt;</code>截斷之前的內容</p><p>所以我在後面加入一行Read more的連結</p><pre><code class="html">&lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#more&quot;&gt;&lt;div style=&quot;text-align: right;&quot;&gt;Read more ➜&lt;/div&gt;&lt;/a&gt;</code></pre><p><code>url_for()</code> 返回一個root的相對路徑Url</p><p><code>post.path</code> 該篇文章的連結</p><p>加好之後</p><h3 id="修改後的source"><a href="#修改後的source" class="headerlink" title="[修改後的source]"></a>[修改後的source]</h3><pre><code class="html">...&lt;div class=&quot;article-body&quot;&gt;    &lt;header class=&quot;article-title&quot;&gt;        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;&lt;%= post.title %&gt;&lt;/a&gt;    &lt;/header&gt;    &lt;div class=&quot;article-entry post-inner-html&quot;&gt;        &lt;% if (post.excerpt)&#123; %&gt;        &lt;%- post.excerpt %&gt;        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#more&quot;&gt;&lt;div style=&quot;text-align: right;&quot;&gt;Read more ➜&lt;/div&gt;&lt;/a&gt;        &lt;% &#125; else &#123; %&gt;        &lt;%- post.content %&gt;        &lt;% &#125; %&gt;    &lt;/div&gt;&lt;/div&gt;...</code></pre><h3 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a>[Demo畫面]</h3><p><img src="/images/20220823/01.png" alt="Untitled"></p>]]></content>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;[前言]&quot;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
+&lt;p&gt;但我這邊使用的&lt;a href=&quot;https://github.com/lh1me/hexo-theme-aomori/releases&quot;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
+&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
+&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://charliee2000.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Test] Test page</title>
+    <link href="https://charliee2000.github.io/2022/08/23/Test-page/"/>
+    <id>https://charliee2000.github.io/2022/08/23/Test-page/</id>
+    <published>2022-08-23T05:35:53.000Z</published>
+    <updated>2022-08-24T16:19:59.629Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Test01"><a href="#Test01" class="headerlink" title="Test01"></a>Test01</h2><p>Qui cupidatat reprehenderit, consequat qui consequat. Consequat qui consequat ipsum veniam fugiat commodo. Consequat ipsum veniam fugiat. Veniam fugiat commodo excepteur irure. Commodo excepteur irure exercitation, do consectetur ex. Exercitation do consectetur ex. Consectetur ex sed elit fugiat. Sed elit fugiat excepteur, enim.</p><p>Esse veniam, excepteur elit. Elit elit reprehenderit, nulla. Nulla deserunt, aliqua non. Non aute aliquip minim velit et. Aliquip minim velit et quis. Velit, et quis magna in anim enim. Magna in anim enim, reprehenderit voluptate incididunt reprehenderit.</p><p>Proident laboris anim cupidatat, velit. Cupidatat velit et fugiat culpa, non. Fugiat culpa non ex cupidatat sint, officia. Ex cupidatat sint officia reprehenderit laborum, occaecat excepteur. Officia reprehenderit laborum occaecat. Laborum occaecat excepteur exercitation dolore esse cupidatat consequat. Excepteur exercitation dolore esse cupidatat, consequat. Esse, cupidatat consequat occaecat.</p><h3 id="Test001"><a href="#Test001" class="headerlink" title="Test001"></a>Test001</h3><p>Laboris anim cupidatat velit et fugiat, culpa non. Velit et fugiat culpa, non ex. Culpa non ex cupidatat sint, officia. Cupidatat, sint officia reprehenderit laborum occaecat. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam.</p><span id="more"></span><p>Anim cupidatat velit et fugiat culpa non. Velit et fugiat culpa, non ex. Culpa non ex cupidatat sint, officia. Cupidatat, sint officia reprehenderit laborum occaecat. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore.</p><p>Cupidatat velit et fugiat culpa, non. Fugiat culpa non ex cupidatat sint, officia. Ex cupidatat sint officia reprehenderit laborum, occaecat excepteur. Officia reprehenderit laborum occaecat. Laborum occaecat excepteur exercitation dolore esse cupidatat consequat. Excepteur exercitation dolore esse cupidatat, consequat. Esse, cupidatat consequat occaecat. Occaecat, cillum incididunt enim veniam proident sit magna.</p><p>Velit et fugiat culpa, non ex. Culpa non ex cupidatat sint, officia. Cupidatat, sint officia reprehenderit laborum occaecat. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam.</p><p>Et fugiat, culpa non ex cupidatat sint officia. Non ex cupidatat sint officia reprehenderit, laborum. Sint officia reprehenderit laborum occaecat excepteur exercitation dolore. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam. Occaecat, cillum incididunt enim veniam proident sit magna.</p><p>Fugiat culpa non ex cupidatat sint, officia. Ex cupidatat sint officia reprehenderit laborum, occaecat excepteur. Officia reprehenderit laborum occaecat. Laborum occaecat excepteur exercitation dolore esse cupidatat consequat. Excepteur exercitation dolore esse cupidatat, consequat. Esse, cupidatat consequat occaecat. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam.</p><p>Culpa non ex cupidatat sint, officia. Cupidatat, sint officia reprehenderit laborum occaecat. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam.</p><p>Non ex cupidatat sint officia reprehenderit, laborum. Sint officia reprehenderit laborum occaecat excepteur exercitation dolore. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam. Sit magna anim veniam esse commodo aliqua in. Anim veniam esse commodo aliqua in, ut aute.</p><p>Ex cupidatat sint officia reprehenderit laborum, occaecat excepteur. Officia reprehenderit laborum occaecat. Laborum occaecat excepteur exercitation dolore esse cupidatat consequat. Excepteur exercitation dolore esse cupidatat, consequat. Esse, cupidatat consequat occaecat. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam. Sit magna anim veniam esse commodo aliqua in. Anim veniam esse commodo aliqua in, ut aute. Commodo aliqua in ut aute.</p><h2 id="Test02"><a href="#Test02" class="headerlink" title="Test02"></a>Test02</h2><p>In adipiscing, cupidatat laborum. Laborum in fugiat cupidatat voluptate voluptate occaecat. Fugiat, cupidatat voluptate voluptate. Voluptate occaecat, duis do anim sunt qui. Do anim sunt qui dolore anim, ullamco enim.</p><p>Adipiscing cupidatat laborum in. Laborum in fugiat cupidatat voluptate voluptate occaecat. Fugiat, cupidatat voluptate voluptate. Voluptate occaecat, duis do anim sunt qui. Do anim sunt qui dolore anim, ullamco enim. Qui dolore anim ullamco enim qui. Anim ullamco enim qui tempor.</p><h3 id="Test002"><a href="#Test002" class="headerlink" title="Test002"></a>Test002</h3><p>Cupidatat laborum in fugiat cupidatat voluptate voluptate occaecat. In fugiat cupidatat voluptate voluptate occaecat. Cupidatat voluptate voluptate occaecat duis do. Voluptate occaecat, duis do anim sunt qui. Do anim sunt qui dolore anim, ullamco enim. Qui dolore anim ullamco enim qui.</p><p>Laborum in fugiat cupidatat voluptate voluptate occaecat. Fugiat, cupidatat voluptate voluptate. Voluptate occaecat, duis do anim sunt qui. Do anim sunt qui dolore anim, ullamco enim. Qui dolore anim ullamco enim qui. Anim ullamco enim qui tempor. Enim qui tempor adipiscing magna incididunt tempor reprehenderit. Tempor adipiscing magna incididunt tempor reprehenderit. Magna incididunt, tempor reprehenderit quis consequat.</p><p>In fugiat cupidatat voluptate voluptate occaecat. Cupidatat voluptate voluptate occaecat duis do. Voluptate occaecat, duis do anim sunt qui. Do anim sunt qui dolore anim, ullamco enim. Qui dolore anim ullamco enim qui.</p><h2 id="Test03"><a href="#Test03" class="headerlink" title="Test03"></a>Test03</h2><p>Proident, enim mollit velit. Velit esse reprehenderit ea. Reprehenderit ea nisi elit veniam ea. Nisi elit veniam ea ea amet commodo. Veniam, ea ea amet commodo duis. Amet commodo duis id labore. Duis id labore enim nisi tempor. Labore enim nisi tempor ad aute.</p><p>Enim ut ea velit, voluptate. Velit voluptate et aliqua incididunt. Et aliqua incididunt aute non est cillum. Incididunt aute non est cillum culpa. Non est cillum, culpa commodo in. Culpa commodo in eu esse ea veniam. In eu, esse ea. Ea veniam ut in.</p><p>Ut ea, velit voluptate et aliqua. Voluptate et aliqua incididunt, aute non est cillum. Incididunt aute non est cillum culpa. Non est cillum, culpa commodo in. Culpa commodo in eu esse ea veniam.</p><p>Ea velit voluptate et aliqua, incididunt. Et aliqua incididunt aute non est cillum. Incididunt aute non est cillum culpa. Non est cillum, culpa commodo in. Culpa commodo in eu esse ea veniam. In eu, esse ea. Ea veniam ut in. Ut in dolore nulla aliqua pariatur sed anim.</p><p>Velit voluptate et aliqua incididunt. Et aliqua incididunt aute non est cillum. Incididunt aute non est cillum culpa. Non est cillum, culpa commodo in. Culpa commodo in eu esse ea veniam. In eu, esse ea. Ea veniam ut in. Ut in dolore nulla aliqua pariatur sed anim. Dolore nulla aliqua pariatur, sed anim minim. Pariatur sed anim, minim officia enim.</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;Test01&quot;&gt;&lt;a href=&quot;#Test01&quot; class=&quot;headerlink&quot; title=&quot;Test01&quot;&gt;&lt;/a&gt;Test01&lt;/h2&gt;&lt;p&gt;Qui cupidatat reprehenderit, consequat qui consequat. Consequat qui consequat ipsum veniam fugiat commodo. Consequat ipsum veniam fugiat. Veniam fugiat commodo excepteur irure. Commodo excepteur irure exercitation, do consectetur ex. Exercitation do consectetur ex. Consectetur ex sed elit fugiat. Sed elit fugiat excepteur, enim.&lt;/p&gt;
+&lt;p&gt;Esse veniam, excepteur elit. Elit elit reprehenderit, nulla. Nulla deserunt, aliqua non. Non aute aliquip minim velit et. Aliquip minim velit et quis. Velit, et quis magna in anim enim. Magna in anim enim, reprehenderit voluptate incididunt reprehenderit.&lt;/p&gt;
+&lt;p&gt;Proident laboris anim cupidatat, velit. Cupidatat velit et fugiat culpa, non. Fugiat culpa non ex cupidatat sint, officia. Ex cupidatat sint officia reprehenderit laborum, occaecat excepteur. Officia reprehenderit laborum occaecat. Laborum occaecat excepteur exercitation dolore esse cupidatat consequat. Excepteur exercitation dolore esse cupidatat, consequat. Esse, cupidatat consequat occaecat.&lt;/p&gt;
+&lt;h3 id=&quot;Test001&quot;&gt;&lt;a href=&quot;#Test001&quot; class=&quot;headerlink&quot; title=&quot;Test001&quot;&gt;&lt;/a&gt;Test001&lt;/h3&gt;&lt;p&gt;Laboris anim cupidatat velit et fugiat, culpa non. Velit et fugiat culpa, non ex. Culpa non ex cupidatat sint, officia. Cupidatat, sint officia reprehenderit laborum occaecat. Reprehenderit laborum occaecat excepteur exercitation dolore. Occaecat excepteur exercitation dolore. Exercitation dolore esse, cupidatat consequat. Cupidatat consequat occaecat cillum incididunt enim veniam. Occaecat, cillum incididunt enim veniam proident sit magna. Enim veniam, proident sit magna anim veniam.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="test" scheme="https://charliee2000.github.io/categories/test/"/>
+    
+    
+    <category term="test" scheme="https://charliee2000.github.io/tags/test/"/>
+    
+  </entry>
+  
+</feed>
