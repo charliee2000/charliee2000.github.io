@@ -6,7 +6,7 @@
   <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
   
   <link href="https://charliee2000.github.io/"/>
-  <updated>2022-08-27T01:52:19.675Z</updated>
+  <updated>2022-08-29T15:51:08.569Z</updated>
   <id>https://charliee2000.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Hexo] How to create rss service on hexo blog</title>
+    <link href="https://charliee2000.github.io/2022/08/29/20220829/"/>
+    <id>https://charliee2000.github.io/2022/08/29/20220829/</id>
+    <published>2022-08-29T14:07:13.000Z</published>
+    <updated>2022-08-29T15:51:08.569Z</updated>
+    
+    <content type="html"><![CDATA[<p>因為平時有在訂閱RSS，所以想說是否在hexo上也可以提供RSS訂閱</p><p>於是找到了這款RSS插件</p><span id="more"></span><br><h2 id="RSS設定配置"><a href="#RSS設定配置" class="headerlink" title="RSS設定配置"></a>RSS設定配置</h2><h3 id="安裝插件"><a href="#安裝插件" class="headerlink" title="安裝插件"></a>安裝插件</h3><pre><code>npm install --save hexo-generator-feed</code></pre><h3 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h3><pre><code># Extensionsplugins:  hexo-generator-feed#Feed Atomfeed:  type: atom  path: atom.xml  limit: 20# For aomori themeaomori_social:    icon: logo-rss    type: logo    url: https://username.github.io/atom.xml</code></pre><h2 id="產生atom-xml"><a href="#產生atom-xml" class="headerlink" title="產生atom.xml"></a>產生atom.xml</h2><pre><code>hexo g</code></pre><p>成功的話就會看到public資料夾下多了一個atom.xml檔案</p><h2 id="Demo"><a href="#Demo" class="headerlink" title="[Demo]"></a><strong>[Demo]</strong></h2><p><img src="/images/2022/b01-1787819.jpg" alt="b01"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;因為平時有在訂閱RSS，所以想說是否在hexo上也可以提供RSS訂閱&lt;/p&gt;
+&lt;p&gt;於是找到了這款RSS插件&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://charliee2000.github.io/tags/hexo/"/>
+    
+    <category term="blog" scheme="https://charliee2000.github.io/tags/blog/"/>
+    
+    <category term="rss" scheme="https://charliee2000.github.io/tags/rss/"/>
+    
+  </entry>
   
   <entry>
     <title>[Notion] How to draw diagrams in notion with mermaid</title>
