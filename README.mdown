@@ -1,0 +1,5 @@
+This is a blog build by hexo
+
+**Demo** - [spadem45420.github.io](http://spadem45420.github.io/)
+
+![Demo.jpg](/images/Demo.jpg)

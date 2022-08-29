@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>[Mac] How to add “Google Keep” to Mac OS like an app in docker | Charlie&#39;s Blog</title>
+
+    <meta name="description" content="&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://keep.google.com/&#34;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;">
+    <meta name="keywords" content="部落格,程式">
+
+    
+
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= "[Mac] How to add “Google Keep” to Mac OS like an app in docker | Charlie&#39;s Blog"  />
+    <meta property="og:description" content= "&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://keep.google.com/&#34;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;" />
+    <meta property="og:url" content="https://charliee2000.github.io/2022/08/25/20220825/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="Charlie" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://keep.google.com/&#34;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;" />
+    <meta name="twitter:title" content="[Mac] How to add “Google Keep” to Mac OS like an app in docker | Charlie&#39;s Blog"/>
+    <meta name="twitter:description" content="&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://keep.google.com/&#34;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;"/>
+    <script type="application/ld+json">
+        {
+            "description": "&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;&lt;strong&gt;[前言]&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;a href=&#34;https://keep.google.com/&#34;&gt;&lt;font color=#daa520&gt;&lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;&lt;/a&gt;在2021 年初已經停用了對Chrome桌面版的支援&lt;/p&gt;
+&lt;p&gt;只剩下Web版跟手機版&lt;/p&gt;
+&lt;p&gt;作為一個常使用&lt;font color=#daa520&gt; &lt;strong&gt;Google Keep&lt;/strong&gt; &lt;/font&gt;來記錄一些瑣事的人&lt;/p&gt;
+&lt;p&gt;要一直打開瀏覽器再開啟網頁版真的是很痛苦&lt;/p&gt;",
+            "author": { "@type": "Person", "name": "Charlie" },
+            "@type": "BlogPosting",
+            "url": "https://charliee2000.github.io/2022/08/25/20220825/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://charliee2000.github.io/images/Neptune.png"
+            },
+            "name": "Charlie"
+            },
+            "headline": "[Mac] How to add “Google Keep” to Mac OS like an app in docker | Charlie&#39;s Blog",
+            "datePublished": "2022-08-25T14:24:22.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://charliee2000.github.io/2022/08/25/20220825/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
+
+
+
+
+    
+
+    
+
+    
+
+    
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1654266144177.css">
+
+
+    
+<link rel="stylesheet" href="/dist/custom.css?v=1654266144177.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = false
+
+    </script>
+
+<meta name="generator" content="Hexo 6.2.0"></head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-METEEMBKHV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-METEEMBKHV');
+</script>
+
+<body>
+    
+    <a target="_blank" rel="noopener" href="https://github.com/charliee2000" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#353F4F; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-avatar avatar avatar-sm">
+                <img src="/images/Neptune.png" alt="Charlie">
+            </div>
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>Charlie&#39;s Blog</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">Home</a>
+                
+                <a href="/archives">Archives</a>
+                
+                <a href="/about">About</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+    <a class="social" target="_blank" href="https://github.com/charliee2000">
+        <ion-icon name="logo-github"></ion-icon>
+    </a>
+
+    <a class="social" target="_blank" href="https://charliee2000.medium.com/">
+        <ion-icon name="logo-medium"></ion-icon>
+    </a>
+
+    <a class="social" target="_blank" href="https://charliee2000.github.io/atom.xml">
+        <ion-icon name="logo-rss"></ion-icon>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">Home</a>
+                    
+                    <a href="/archives">Archives</a>
+                    
+                    <a href="/about">About</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-cl7etbqbw0010tc2x27p16lem" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      [Mac] How to add “Google Keep” to Mac OS like an app in docker
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-08-25T14:24:22.000Z" itemprop="datePublished">2022-08-25</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/Mac/">Mac</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Chrome/" rel="tag">Chrome</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Keep/" rel="tag">Google Keep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li></ul>
+            </div>
+            
+
+            
+            <div class="article-busuanzi">
+                <span id="busuanzi_value_page_pv">N</span> 人看过
+            </div>
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a><strong>[前言]</strong></h2><p><a target="_blank" rel="noopener" href="https://keep.google.com/"><font color=#daa520><strong>Google Keep</strong> </font></a>在2021 年初已經停用了對Chrome桌面版的支援</p>
+<p>只剩下Web版跟手機版</p>
+<p>作為一個常使用<font color=#daa520> <strong>Google Keep</strong> </font>來記錄一些瑣事的人</p>
+<p>要一直打開瀏覽器再開啟網頁版真的是很痛苦</p>
+<span id="more"></span>
+
+<br>
+
+<h2 id="桌面捷徑"><a href="#桌面捷徑" class="headerlink" title="[桌面捷徑]"></a><strong>[桌面捷徑]</strong></h2><p>後來發現了Chrome有保留把<font color=#daa520> <strong>Google Keep</strong> </font>作為桌面捷徑的方式(<code>只適用於Mac</code>)</p>
+<br>
+
+<h2 id="開啟之後的樣子"><a href="#開啟之後的樣子" class="headerlink" title="[開啟之後的樣子]"></a><strong>[開啟之後的樣子]</strong></h2><img src="/images/20220825/a0825_02.jpg" width="50%" height="50%">
+
+<br>
+
+<h2 id="設置方式"><a href="#設置方式" class="headerlink" title="[設置方式]"></a><strong>[設置方式]</strong></h2><p>打開<a target="_blank" rel="noopener" href="https://keep.google.com/"><font color=#daa520> <strong>Google Keep</strong> </font></a><br>在瀏覽器右上 ⋮ → 更多工具 → 建立捷徑</p>
+<img src="/images/20220825/a0825_03.jpg" width="80%" height="80%">
+
+<p>這樣就新增完成了</p>
+<p>可以獨立於Chrome獨自運作，看起來就像桌面程式一樣</p>
+<br>
+
+<h2 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a><strong>[Demo畫面]</strong></h2><img src="/images/20220825/a0825_01.jpg" width="50%" height="50%">
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+    <a href="/2022/08/25/20220825-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-caption">下一篇</div>
+      <div class="article-nav-title">
+        
+          [Hexo] How to generate README.md when hexo generate deploy to github
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/08/24/20220824/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">上一篇</div>
+      <div class="article-nav-title">[Hexo] How to setup a simple comments in hexo blog</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">分享</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=[Mac] How to add “Google Keep” to Mac OS like an app in docker - Charlie's Blog&url=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F08%2F25%2F20220825%2F">
+            <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=[Mac] How to add “Google Keep” to Mac OS like an app in docker - Charlie's Blog&u=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F08%2F25%2F20220825%2F">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=[Mac] How to add “Google Keep” to Mac OS like an app in docker - Charlie's Blog&url=https://charliee2000.github.io/2022/08/25/20220825/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="charliee2000/charliee2000.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar ">
+                
+
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Notion/">Notion</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/" rel="tag">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Keep/" rel="tag">Google Keep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mermaid/" rel="tag">Mermaid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notion/" rel="tag">Notion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comments/" rel="tag">comments</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2022/08/26/20220825-3/">[Notion] How to draw diagrams in notion with mermaid</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/25/20220825-2/">[Hexo] How to generate README.md when hexo generate deploy to github</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/25/20220825/">[Mac] How to add “Google Keep” to Mac OS like an app in docker</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/24/20220824/">[Hexo] How to setup a simple comments in hexo blog</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/23/20220823-2/">[Hexo] How to build a blog by hexo deploy to github</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Please do not remove this -->
+    <!-- 开源不易，请勿删除 -->
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            Charlie&#39;s Blog &copy; 2022<br>
+            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a>
+        </div>
+    </div>
+
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@6.0.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+
+
+
+
+<script src="/dist/build.js?1654266144177.js"></script>
+
+
+<script src="/dist/custom.js?1654266144177.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
