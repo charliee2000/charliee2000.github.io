@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/tags/comments/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://charliee2000.github.io/tags/Mermaid/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -157,6 +150,13 @@
   
   <url>
     <loc>https://charliee2000.github.io/tags/Notion/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/comments/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
