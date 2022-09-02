@@ -18,6 +18,8 @@
     
 
     
+    <meta property="algolia:search" data-application-id="O5OURP8H0F" data-api-key="95de33ff0fbaed2abe22b9b6262b447a" data-index-name="charlieblog">
+    
 
     
 
@@ -50,7 +52,7 @@
             
         }
         window.aomori_logo_typed_animated = true
-        window.aomori_search_algolia = false
+        window.aomori_search_algolia = true
 
     </script>
 
@@ -176,8 +178,18 @@
             </section>
 
             
-            <aside class="sidebar ">
+            <aside class="sidebar sidebar-search-fix">
                 
+
+    <div class="search">
+    <div class="has-icon-right">
+        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
+        <div class="form-icon">
+            <ion-icon name="search"></ion-icon>
+        </div>
+    </div>
+    <div class="search-result" id="search-ps"></div>
+</div>
 
 
 <div class="widget" id="widget">
