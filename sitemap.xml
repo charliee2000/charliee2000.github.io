@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://charliee2000.github.io/googlec586156773e4f3e4.html</loc>
-    
-    <lastmod>2022-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://charliee2000.github.io/2022/09/02/20220902-3/</loc>
     
     <lastmod>2022-09-02</lastmod>
@@ -158,6 +149,20 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/tags/Mermaid/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/Notion/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/tags/Mac/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -179,6 +184,13 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/tags/rss/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/tags/java/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -194,27 +206,6 @@
   
   <url>
     <loc>https://charliee2000.github.io/tags/sonarlint/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/rss/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/Mermaid/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/Notion/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -244,6 +235,13 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/categories/Notion/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/categories/Mac/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -252,13 +250,6 @@
   
   <url>
     <loc>https://charliee2000.github.io/categories/java/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/categories/Notion/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
