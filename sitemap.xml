@@ -163,34 +163,6 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/tags/Mac/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/Google-Keep/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/Chrome/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/rss/</loc>
-    <lastmod>2022-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://charliee2000.github.io/tags/java/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -206,6 +178,34 @@
   
   <url>
     <loc>https://charliee2000.github.io/tags/sonarlint/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/rss/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/Mac/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/Google-Keep/</loc>
+    <lastmod>2022-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/Chrome/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -242,14 +242,14 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/categories/Mac/</loc>
+    <loc>https://charliee2000.github.io/categories/java/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/categories/java/</loc>
+    <loc>https://charliee2000.github.io/categories/Mac/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
