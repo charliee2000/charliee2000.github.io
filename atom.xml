@@ -6,7 +6,7 @@
   <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
   
   <link href="https://charliee2000.github.io/"/>
-  <updated>2022-08-31T09:51:18.158Z</updated>
+  <updated>2022-09-02T02:50:50.417Z</updated>
   <id>https://charliee2000.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception</title>
+    <link href="https://charliee2000.github.io/2022/09/02/20220902/"/>
+    <id>https://charliee2000.github.io/2022/09/02/20220902/</id>
+    <published>2022-09-02T02:42:58.000Z</published>
+    <updated>2022-09-02T02:50:50.417Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在使用JBoss resteasy呼叫api的時候出現</p><p><code>javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure</code></p><p>查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致</p><br><span id="more"></span><h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><p>先安裝一下nmap</p><pre><code>brew install nmap</code></pre><p>nmap是一款網路的安全工具</p><p>官方介紹：</p><blockquote><p>Nmap (“Network Mapper”) is a <a href="https://nmap.org/npsl/">free and open source</a> utility for network discovery and security auditing.</p></blockquote><br><p>這邊我用來檢查server端的協議版本</p><pre><code>nmap --script ssl-enum-ciphers -p 443 你的server端位置Starting Nmap 7.92 ( &lt;https://nmap.org&gt; ) at 2022-09-02 09:50 CSTNmap scan report for 你的server端位置Host is up (0.10s latency).Other addresses for 你的server端位置PORT    STATE SERVICE443/tcp open  https| ssl-enum-ciphers:|   TLSv1.0:|   TLSv1.1:|_  TLSv1.2:</code></pre><p>看起來是支援TLS1.0, TLS1.1, TLS1.2</p><br><p>接著看一下client端用的協議版本</p><p>在java code中加入</p><pre><code class="java">System.setProperty(&quot;javax.net.debug&quot;, &quot;all&quot;);</code></pre><br><p>再次呼叫之後可以看到以下某一行的輸出</p><pre><code>...Thread-1, WRITE: SSLv2 client hello message, length = 110...</code></pre><p>看起來是client端有上使用到SSLv2的協議版本</p><p>但是server端不支援</p><p>因為專案的項目是使用jdk6</p><p>更換成jdk7後就沒問題了</p><br><hr><h2 id="參考資訊"><a href="#參考資訊" class="headerlink" title="參考資訊"></a>參考資訊</h2><ul><li>oracle<ul><li><a href="https://www.oracle.com/java/technologies/java-archive-downloads-java-plat-downloads.html#jce_policy-6-oth-JPR">jce1.6下載</a></li></ul></li><li>blog<ul><li><a href="https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html">https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html</a></li><li><a href="https://blog.csdn.net/keyi__/article/details/122842356">https://blog.csdn.net/keyi__/article/details/122842356</a></li><li><a href="https://www.jianshu.com/p/acbfea5ec597">https://www.jianshu.com/p/acbfea5ec597</a></li></ul></li><li>stackoverflow<ul><li><a href="https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception">https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception</a></li></ul></li><li>other<ul><li><a href="https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/">https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/</a></li></ul></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;問題&quot;&gt;&lt;a href=&quot;#問題&quot; class=&quot;headerlink&quot; title=&quot;問題&quot;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="https://charliee2000.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://charliee2000.github.io/tags/java/"/>
+    
+    <category term="exception" scheme="https://charliee2000.github.io/tags/exception/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Java] How to install sonarlint in eclipse with specify version</title>
     <link href="https://charliee2000.github.io/2022/08/31/20220831/"/>
     <id>https://charliee2000.github.io/2022/08/31/20220831/</id>
     <published>2022-08-31T07:16:45.000Z</published>
-    <updated>2022-08-31T09:51:18.158Z</updated>
+    <updated>2022-09-02T02:51:20.146Z</updated>
     
     <content type="html"><![CDATA[<p><strong>SonarLint</strong>是一款Java的程式碼品質分析工具</p><p>支援Eclipse, IntelliJ, Vs Code等開發工具</p><p>幫助弱點掃描、程式優化，使用上也非常方便</p><br><span id="more"></span><h2 id="eclipse安裝"><a href="#eclipse安裝" class="headerlink" title="[eclipse安裝]"></a><strong>[eclipse安裝]</strong></h2><p>eclipse有兩種安裝方式</p><br><h3 id="Marketplace安裝"><a href="#Marketplace安裝" class="headerlink" title="Marketplace安裝"></a><strong>Marketplace安裝</strong></h3><img src="/images/2022/Xnip2022-08-31_17-07-11.jpg" alt="Xnip2022-08-31_17-07-11" style="zoom: 67%;" /><p>一般來說新版本的eclipse可以直接透過marketplace安裝</p><p>但是如果是舊版本的eclipse，可能會出現相容性的問題</p><p>那就要透過 install new software的方式</p><br><h3 id="Install-New-Software-安裝"><a href="#Install-New-Software-安裝" class="headerlink" title="Install New Software 安裝"></a><strong>Install New Software 安裝</strong></h3><p>舊版本的SonarLint可以透過以下連結下載安裝包</p><p><a href="https://binaries.sonarsource.com/?prefix=SonarLint-for-Eclipse/releases/">https://binaries.sonarsource.com/?prefix=SonarLint-for-Eclipse/releases/</a></p><p>這邊示範的是eclipse-2020-03+sonarlint5.1的版本</p><p><img src="/images/2022/Xnip2022-08-31_13-14-42.jpg" alt="Xnip2022-08-31_13-14-42"></p><p>點選 <strong>Add</strong></p><br><img src="/images/2022/Xnip2022-08-31_13-14-53.jpg" alt="Xnip2022-08-31_13-14-53" style="zoom: 67%;" /><p>點選 <strong>Archive</strong></p><br><img src="/images/2022/Xnip2022-08-31_14-17-19.jpg" alt="Xnip2022-08-31_14-17-19" style="zoom:67%;" /><p>選擇下載好的安裝包</p><br><p><img src="/images/2022/Xnip2022-08-31_17-13-32.jpg" alt="Xnip2022-08-31_17-13-32"></p><p>只勾選第一個，點next進行安裝</p><p>安裝完成重啟eclipse即可</p><br><img src="/images/2022/Xnip2022-08-31_17-19-13.jpg" alt="Xnip2022-08-31_17-19-13" style="zoom:67%;" /><p>使用方式：對要檢查的檔案點選 右鍵 -&gt; Sonarlint -&gt; Analyze</p><br><h2 id="Demo"><a href="#Demo" class="headerlink" title="[Demo]"></a><strong>[Demo]</strong></h2><img src="/images/2022/Xnip2022-08-31_17-04-34.jpg" alt="Xnip2022-08-31_17-04-34" style="zoom:67%;" /><img src="/images/2022/Xnip2022-08-31_17-29-28.jpg" alt="Xnip2022-08-31_17-29-28" style="zoom:67%;" /><p>在Sonarlint report會掃出針對這段程式的弱點</p><br><h2 id="錯誤排查"><a href="#錯誤排查" class="headerlink" title="[錯誤排查]"></a><strong>[錯誤排查]</strong></h2><h3 id="Lombok版本過舊"><a href="#Lombok版本過舊" class="headerlink" title="Lombok版本過舊"></a><strong>Lombok版本過舊</strong></h3><blockquote><p>An internal error occurred during: “SonarLint processing file &#x2F;charlie&#x2F;test&#x2F;sonarlint&#x2F;Test.java”.<br>lombok&#x2F;launch&#x2F;PatchFixesHider$Transform</p></blockquote><p>會出現這個原因表示eclipse的<code>lombok</code>版本太舊了</p><p>在lombok的官網下載新版安裝即可</p><p><a href="https://projectlombok.org/download">https://projectlombok.org/download</a></p><img src="/images/2022/Xnip2022-08-31_17-25-11.jpg" alt="Xnip2022-08-31_17-25-11" style="zoom: 40%;" /><p>點選install安裝</p><p>安裝完後需要重開eclipse</p>]]></content>
     
@@ -36,9 +62,11 @@
     <category term="java" scheme="https://charliee2000.github.io/categories/java/"/>
     
     
+    <category term="java" scheme="https://charliee2000.github.io/tags/java/"/>
+    
     <category term="eclipse" scheme="https://charliee2000.github.io/tags/eclipse/"/>
     
-    <category term="java - sonarlint" scheme="https://charliee2000.github.io/tags/java-sonarlint/"/>
+    <category term="sonarlint" scheme="https://charliee2000.github.io/tags/sonarlint/"/>
     
   </entry>
   

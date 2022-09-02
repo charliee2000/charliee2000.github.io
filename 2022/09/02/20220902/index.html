@@ -5,45 +5,45 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
-    <title>[Hexo] How to add read more link in hexo blog | Charlie&#39;s Blog</title>
+    <title>[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception | Charlie&#39;s Blog</title>
 
-    <meta name="description" content="&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
-&lt;p&gt;但我這邊使用的&lt;a href=&#34;https://github.com/lh1me/hexo-theme-aomori/releases&#34;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
-&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
-&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;">
+    <meta name="description" content="&lt;h2 id=&#34;問題&#34;&gt;&lt;a href=&#34;#問題&#34; class=&#34;headerlink&#34; title=&#34;問題&#34;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;">
     <meta name="keywords" content="部落格,程式">
 
     
 
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content= "[Hexo] How to add read more link in hexo blog | Charlie&#39;s Blog"  />
-    <meta property="og:description" content= "&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
-&lt;p&gt;但我這邊使用的&lt;a href=&#34;https://github.com/lh1me/hexo-theme-aomori/releases&#34;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
-&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
-&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;" />
-    <meta property="og:url" content="https://charliee2000.github.io/2022/08/23/20220823/index.html" />
+    <meta property="og:title" content= "[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception | Charlie&#39;s Blog"  />
+    <meta property="og:description" content= "&lt;h2 id=&#34;問題&#34;&gt;&lt;a href=&#34;#問題&#34; class=&#34;headerlink&#34; title=&#34;問題&#34;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;" />
+    <meta property="og:url" content="https://charliee2000.github.io/2022/09/02/20220902/index.html" />
     <meta property="og:site_name" content="" />
     <meta property="article:author" content="Charlie" />
     <meta property="article:publisher" content="" />
-    <meta property="og:description" content="&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
-&lt;p&gt;但我這邊使用的&lt;a href=&#34;https://github.com/lh1me/hexo-theme-aomori/releases&#34;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
-&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
-&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;" />
-    <meta name="twitter:title" content="[Hexo] How to add read more link in hexo blog | Charlie&#39;s Blog"/>
-    <meta name="twitter:description" content="&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
-&lt;p&gt;但我這邊使用的&lt;a href=&#34;https://github.com/lh1me/hexo-theme-aomori/releases&#34;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
-&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
-&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;"/>
+    <meta property="og:description" content="&lt;h2 id=&#34;問題&#34;&gt;&lt;a href=&#34;#問題&#34; class=&#34;headerlink&#34; title=&#34;問題&#34;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;" />
+    <meta name="twitter:title" content="[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception | Charlie&#39;s Blog"/>
+    <meta name="twitter:description" content="&lt;h2 id=&#34;問題&#34;&gt;&lt;a href=&#34;#問題&#34; class=&#34;headerlink&#34; title=&#34;問題&#34;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;"/>
     <script type="application/ld+json">
         {
-            "description": "&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;[前言]&#34;&gt;&lt;/a&gt;[前言]&lt;/h3&gt;&lt;p&gt;Hexo使用的主題通常會在&lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt;的斷點生成一個Read more的連結按鈕&lt;/p&gt;
-&lt;p&gt;但我這邊使用的&lt;a href=&#34;https://github.com/lh1me/hexo-theme-aomori/releases&#34;&gt;Aomori&lt;/a&gt;並不支援直接增加Read more的連結&lt;/p&gt;
-&lt;p&gt;網路上查找之後發現沒有找到類似的外掛或是解法&lt;/p&gt;
-&lt;p&gt;所以後來直接在原始碼中做處理&lt;/p&gt;",
+            "description": "&lt;h2 id=&#34;問題&#34;&gt;&lt;a href=&#34;#問題&#34; class=&#34;headerlink&#34; title=&#34;問題&#34;&gt;&lt;/a&gt;問題&lt;/h2&gt;&lt;p&gt;在使用JBoss resteasy呼叫api的時候出現&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致&lt;/p&gt;
+&lt;br&gt;",
             "author": { "@type": "Person", "name": "Charlie" },
             "@type": "BlogPosting",
-            "url": "https://charliee2000.github.io/2022/08/23/20220823/index.html",
+            "url": "https://charliee2000.github.io/2022/09/02/20220902/index.html",
             "publisher": {
             "@type": "Organization",
             "logo": {
@@ -52,11 +52,11 @@
             },
             "name": "Charlie"
             },
-            "headline": "[Hexo] How to add read more link in hexo blog | Charlie&#39;s Blog",
-            "datePublished": "2022-08-23T08:12:19.000Z",
+            "headline": "[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception | Charlie&#39;s Blog",
+            "datePublished": "2022-09-02T02:42:58.000Z",
             "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": "https://charliee2000.github.io/2022/08/23/20220823/index.html"
+                "@id": "https://charliee2000.github.io/2022/09/02/20220902/index.html"
             },
             "@context": "http://schema.org"
         }
@@ -195,7 +195,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl7jvqvf90002tb2xekgy7m43" class="article article-type-post" itemscope
+    <article id="post-cl7jvqvfn000itb2xg558budc" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -210,7 +210,7 @@
             
   
     <h1 class="article-title" itemprop="name">
-      [Hexo] How to add read more link in hexo blog
+      [Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception
     </h1>
   
 
@@ -220,18 +220,18 @@
         <div class="article-more-info article-more-info-post hairline">
 
             <div class="article-date">
-  <time datetime="2022-08-23T08:12:19.000Z" itemprop="datePublished">2022-08-23</time>
+  <time datetime="2022-09-02T02:42:58.000Z" itemprop="datePublished">2022-09-02</time>
 </div>
 
             
             <div class="article-category">
-                <a class="article-category-link" href="/categories/hexo/">hexo</a>
+                <a class="article-category-link" href="/categories/java/">java</a>
             </div>
             
 
             
             <div class="article-tag">
-                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exception/" rel="tag">exception</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li></ul>
             </div>
             
 
@@ -244,75 +244,81 @@
         </div>
 
         <div class="article-entry post-inner-html hairline" itemprop="articleBody">
-            <h3 id="前言"><a href="#前言" class="headerlink" title="[前言]"></a>[前言]</h3><p>Hexo使用的主題通常會在<code>&lt;!--more--&gt;</code>的斷點生成一個Read more的連結按鈕</p>
-<p>但我這邊使用的<a target="_blank" rel="noopener" href="https://github.com/lh1me/hexo-theme-aomori/releases">Aomori</a>並不支援直接增加Read more的連結</p>
-<p>網路上查找之後發現沒有找到類似的外掛或是解法</p>
-<p>所以後來直接在原始碼中做處理</p>
+            <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在使用JBoss resteasy呼叫api的時候出現</p>
+<p><code>javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure</code></p>
+<p>查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致</p>
+<br>
+
 <span id="more"></span>
 
-<p>以下為Aomori的themes的資料夾結構</p>
-<h3 id="themes資料夾結構"><a href="#themes資料夾結構" class="headerlink" title="[themes資料夾結構]"></a>[themes資料夾結構]</h3><pre><code>├── CHANGELOG.md
-├── LICENSE
-├── README.md
-├── docs
-├── languages
-├── layout
-│   ├── _partial
-│   │   ├── article-index.ejs
-│   │   ├── page
-│   │   ├── post
-│   ├── _widget
-├── source
-│   ├── dist
-│   ├── javascripts
-│   ├── modules
-│   └── stylesheets
-└── stylelint.config.js
+<h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><p>先安裝一下nmap</p>
+<pre><code>brew install nmap
 </code></pre>
-<p>找到article-index.ejs這個ejs, 透過編輯器打開之後可以看到</p>
-<h3 id="修改前的source"><a href="#修改前的source" class="headerlink" title="[修改前的source]"></a>[修改前的source]</h3><pre><code class="html">...
+<p>nmap是一款網路的安全工具</p>
+<p>官方介紹：</p>
+<blockquote>
+<p>Nmap (“Network Mapper”) is a <a target="_blank" rel="noopener" href="https://nmap.org/npsl/">free and open source</a> utility for network discovery and security auditing.</p>
+</blockquote>
+<br>
 
-&lt;div class=&quot;article-body&quot;&gt;
-    &lt;header class=&quot;article-title&quot;&gt;
-        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;&lt;%= post.title %&gt;&lt;/a&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;article-entry post-inner-html&quot;&gt;
-        &lt;% if (post.excerpt)&#123; %&gt;
-        &lt;%- post.excerpt %&gt;
-        &lt;% &#125; else &#123; %&gt;
-        &lt;%- post.content %&gt;
-        &lt;% &#125; %&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<p>這邊我用來檢查server端的協議版本</p>
+<pre><code>nmap --script ssl-enum-ciphers -p 443 你的server端位置
 
-...
+Starting Nmap 7.92 ( &lt;https://nmap.org&gt; ) at 2022-09-02 09:50 CST
+Nmap scan report for 你的server端位置
+Host is up (0.10s latency).
+Other addresses for 你的server端位置
+
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-enum-ciphers:
+|   TLSv1.0:
+|   TLSv1.1:
+|_  TLSv1.2:
 </code></pre>
-<p><code>post.excerpt</code> 指的是文章的摘要內容，也就是<code>&lt;!--more--&gt;</code>截斷之前的內容</p>
-<p>所以我在後面加入一行Read more的連結</p>
-<pre><code class="html">&lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#more&quot;&gt;&lt;div style=&quot;text-align: right;&quot;&gt;Read more ➜&lt;/div&gt;&lt;/a&gt;
-</code></pre>
-<p><code>url_for()</code> 返回一個root的相對路徑Url</p>
-<p><code>post.path</code> 該篇文章的連結</p>
-<p>加好之後</p>
-<h3 id="修改後的source"><a href="#修改後的source" class="headerlink" title="[修改後的source]"></a>[修改後的source]</h3><pre><code class="html">...
+<p>看起來是支援TLS1.0, TLS1.1, TLS1.2</p>
+<br>
 
-&lt;div class=&quot;article-body&quot;&gt;
-    &lt;header class=&quot;article-title&quot;&gt;
-        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;&quot;&gt;&lt;%= post.title %&gt;&lt;/a&gt;
-    &lt;/header&gt;
-    &lt;div class=&quot;article-entry post-inner-html&quot;&gt;
-        &lt;% if (post.excerpt)&#123; %&gt;
-        &lt;%- post.excerpt %&gt;
-        &lt;a href=&quot;&lt;%- url_for(post.path) %&gt;#more&quot;&gt;&lt;div style=&quot;text-align: right;&quot;&gt;Read more ➜&lt;/div&gt;&lt;/a&gt;
-        &lt;% &#125; else &#123; %&gt;
-        &lt;%- post.content %&gt;
-        &lt;% &#125; %&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<p>接著看一下client端用的協議版本</p>
+<p>在java code中加入</p>
+<pre><code class="java">System.setProperty(&quot;javax.net.debug&quot;, &quot;all&quot;);
+</code></pre>
+<br>
+
+<p>再次呼叫之後可以看到以下某一行的輸出</p>
+<pre><code>...
+
+Thread-1, WRITE: SSLv2 client hello message, length = 110
 
 ...
 </code></pre>
-<h3 id="Demo畫面"><a href="#Demo畫面" class="headerlink" title="[Demo畫面]"></a>[Demo畫面]</h3><p><img src="/images/20220823/01.png" alt="Untitled"></p>
+<p>看起來是client端有上使用到SSLv2的協議版本</p>
+<p>但是server端不支援</p>
+<p>因為專案的項目是使用jdk6</p>
+<p>更換成jdk7後就沒問題了</p>
+<br>
+
+<hr>
+<h2 id="參考資訊"><a href="#參考資訊" class="headerlink" title="參考資訊"></a>參考資訊</h2><ul>
+<li>oracle<ul>
+<li><a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/java-archive-downloads-java-plat-downloads.html#jce_policy-6-oth-JPR">jce1.6下載</a></li>
+</ul>
+</li>
+<li>blog<ul>
+<li><a target="_blank" rel="noopener" href="https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html">https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/keyi__/article/details/122842356">https://blog.csdn.net/keyi__/article/details/122842356</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/acbfea5ec597">https://www.jianshu.com/p/acbfea5ec597</a></li>
+</ul>
+</li>
+<li>stackoverflow<ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception">https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception</a></li>
+</ul>
+</li>
+<li>other<ul>
+<li><a target="_blank" rel="noopener" href="https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/">https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
 
@@ -331,19 +337,10 @@
     
 <nav class="article-nav">
   
-    <a href="/2022/08/23/20220823-2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <div class="article-nav-caption">下一篇</div>
-      <div class="article-nav-title">
-        
-          [Hexo] How to build a blog by hexo deploy to github
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/08/23/Test-page/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/31/20220831/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-caption">上一篇</div>
-      <div class="article-nav-title">[Test] Test page</div>
+      <div class="article-nav-title">[Java] How to install sonarlint in eclipse with specify version</div>
     </a>
   
 </nav>
@@ -352,15 +349,15 @@
     <section class="share">
         <div class="share-title">分享</div>
         <a class="share-item" target="_blank"
-            href="https://twitter.com/share?text=[Hexo] How to add read more link in hexo blog - Charlie's Blog&url=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F08%2F23%2F20220823%2F">
+            href="https://twitter.com/share?text=[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception - Charlie's Blog&url=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F09%2F02%2F20220902%2F">
             <ion-icon name="logo-twitter"></ion-icon>
         </a>
         <a class="share-item" target="_blank"
-            href="https://www.facebook.com/sharer.php?title=[Hexo] How to add read more link in hexo blog - Charlie's Blog&u=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F08%2F23%2F20220823%2F">
+            href="https://www.facebook.com/sharer.php?title=[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception - Charlie's Blog&u=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F09%2F02%2F20220902%2F">
             <ion-icon name="logo-facebook"></ion-icon>
         </a>
         <!-- <a class="share-item" target="_blank"
-            href="https://service.weibo.com/share/share.php?title=[Hexo] How to add read more link in hexo blog - Charlie's Blog&url=https://charliee2000.github.io/2022/08/23/20220823/&pic=">
+            href="https://service.weibo.com/share/share.php?title=[Java] Solove “javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure” exception - Charlie's Blog&url=https://charliee2000.github.io/2022/09/02/20220902/&pic=">
             <div class="n-icon n-icon-weibo"></div>
         </a> -->
     </section>
