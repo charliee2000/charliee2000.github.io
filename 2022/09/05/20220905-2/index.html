@@ -187,7 +187,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl7owa2v7000t142xejnsh7i3" class="article article-type-post" itemscope
+    <article id="post-cl7oxvr09000uch2xfnte2sb8" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -259,7 +259,7 @@
 </code></pre>
 <br>
 
-<h2 id="2-Exmaple"><a href="#2-Exmaple" class="headerlink" title="2. Exmaple"></a>2. Exmaple</h2><pre><code class="java">// init client
+<h2 id="2-Exmaple"><a href="#2-Exmaple" class="headerlink" title="2. Exmaple"></a>2. Exmaple</h2><h3 id="Java-code"><a href="#Java-code" class="headerlink" title="Java code"></a>Java code</h3><pre><code class="java">// init client
 Client client = ClientBuilder.newClient();
 // Demo API
 // Using google app script simple api for demo
@@ -279,7 +279,13 @@ System.out.println(&quot;body = &quot; + body);
 // junit check
 Assert.assertEquals(200, response.getStatus());
 </code></pre>
-<h2 id="3-Source-Code"><a href="#3-Source-Code" class="headerlink" title="3. Source Code"></a>3. Source Code</h2><pre><code>git clone https://github.com/charliee2000/code-java.git
+<h3 id="Run-console"><a href="#Run-console" class="headerlink" title="Run console"></a>Run console</h3><pre><code>response = InboundJaxrsResponse&#123;context=ClientResponse&#123;method=GET, uri=https://script.google.com/macros/s/AKfycbyPthJ8iO6B1fPR1YBVvltBQz4dvAnrtE48sw0VxqMIW-XwejTsS4db3Pgw3oUWA4U/exec, status=200, reason=OK&#125;&#125;
+response.getStatus() = 200
+body = &#123;&quot;content&quot;:[&#123;&quot;status&quot;:&quot;success&quot;&#125;]&#125;
+</code></pre>
+<br>
+
+<h2 id="3-Source-Code"><a href="#3-Source-Code" class="headerlink" title="3. Source Code"></a>3. Source Code</h2><pre><code class="sh">git clone https://github.com/charliee2000/code-java.git
 </code></pre>
 
         </div>
