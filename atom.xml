@@ -6,7 +6,7 @@
   <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
   
   <link href="https://charliee2000.github.io/"/>
-  <updated>2022-09-06T01:45:13.367Z</updated>
+  <updated>2022-09-08T05:42:52.017Z</updated>
   <id>https://charliee2000.github.io/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>20220906</title>
-    <link href="https://charliee2000.github.io/2022/09/06/20220906/"/>
-    <id>https://charliee2000.github.io/2022/09/06/20220906/</id>
-    <published>2022-09-06T01:45:04.000Z</published>
-    <updated>2022-09-06T01:45:13.367Z</updated>
-    
-    
-    
-    
-    <category term="xxx" scheme="https://charliee2000.github.io/categories/xxx/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>[Java] Examples for javax.ws.rs.client.ClientBuilder</title>

@@ -17,15 +17,6 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/2022/09/06/20220906/</loc>
-    
-    <lastmod>2022-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://charliee2000.github.io/2021/09/05/test02/</loc>
     
     <lastmod>2022-09-05</lastmod>
@@ -305,7 +296,7 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/categories/xxx/</loc>
+    <loc>https://charliee2000.github.io/categories/Chrome/</loc>
     <lastmod>2022-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -313,13 +304,6 @@
   
   <url>
     <loc>https://charliee2000.github.io/categories/test/</loc>
-    <lastmod>2022-09-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/categories/Chrome/</loc>
     <lastmod>2022-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
