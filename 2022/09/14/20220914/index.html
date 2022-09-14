@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <title>[VPN] How to create an openvpn server with tp-link router and connect with smb server | Charlie&#39;s Coding Blog</title>
+
+    <meta name="description" content="&lt;p&gt;本篇文章是記錄如何搭建&lt;code&gt;VPN Server&lt;/code&gt;並透過&lt;code&gt;SMB連線&lt;/code&gt;的方式存取電腦中的檔案&lt;/p&gt;
+&lt;p&gt;非專業教學文，若有錯誤請留言告知，謝謝&lt;/p&gt;">
+    <meta name="keywords" content="部落格,程式">
+
+    
+
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content= "[VPN] How to create an openvpn server with tp-link router and connect with smb server | Charlie&#39;s Coding Blog"  />
+    <meta property="og:description" content= "&lt;p&gt;本篇文章是記錄如何搭建&lt;code&gt;VPN Server&lt;/code&gt;並透過&lt;code&gt;SMB連線&lt;/code&gt;的方式存取電腦中的檔案&lt;/p&gt;
+&lt;p&gt;非專業教學文，若有錯誤請留言告知，謝謝&lt;/p&gt;" />
+    <meta property="og:url" content="https://charliee2000.github.io/2022/09/14/20220914/index.html" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:author" content="Charlie" />
+    <meta property="article:publisher" content="" />
+    <meta property="og:description" content="&lt;p&gt;本篇文章是記錄如何搭建&lt;code&gt;VPN Server&lt;/code&gt;並透過&lt;code&gt;SMB連線&lt;/code&gt;的方式存取電腦中的檔案&lt;/p&gt;
+&lt;p&gt;非專業教學文，若有錯誤請留言告知，謝謝&lt;/p&gt;" />
+    <meta name="twitter:title" content="[VPN] How to create an openvpn server with tp-link router and connect with smb server | Charlie&#39;s Coding Blog"/>
+    <meta name="twitter:description" content="&lt;p&gt;本篇文章是記錄如何搭建&lt;code&gt;VPN Server&lt;/code&gt;並透過&lt;code&gt;SMB連線&lt;/code&gt;的方式存取電腦中的檔案&lt;/p&gt;
+&lt;p&gt;非專業教學文，若有錯誤請留言告知，謝謝&lt;/p&gt;"/>
+    <script type="application/ld+json">
+        {
+            "description": "&lt;p&gt;本篇文章是記錄如何搭建&lt;code&gt;VPN Server&lt;/code&gt;並透過&lt;code&gt;SMB連線&lt;/code&gt;的方式存取電腦中的檔案&lt;/p&gt;
+&lt;p&gt;非專業教學文，若有錯誤請留言告知，謝謝&lt;/p&gt;",
+            "author": { "@type": "Person", "name": "Charlie" },
+            "@type": "BlogPosting",
+            "url": "https://charliee2000.github.io/2022/09/14/20220914/index.html",
+            "publisher": {
+            "@type": "Organization",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://charliee2000.github.io/images/Neptune.png"
+            },
+            "name": "Charlie"
+            },
+            "headline": "[VPN] How to create an openvpn server with tp-link router and connect with smb server | Charlie&#39;s Coding Blog",
+            "datePublished": "2022-09-14T13:03:52.000Z",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://charliee2000.github.io/2022/09/14/20220914/index.html"
+            },
+            "@context": "http://schema.org"
+        }
+    </script>
+
+
+
+
+    
+
+    
+    <meta property="algolia:search" data-application-id="O5OURP8H0F" data-api-key="95de33ff0fbaed2abe22b9b6262b447a" data-index-name="charlieblog">
+    
+
+    
+
+    
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+    
+
+    
+
+    
+
+    
+
+    
+<link rel="stylesheet" href="/dist/build.css?v=1654266144177.css">
+
+
+    
+<link rel="stylesheet" href="/dist/custom.css?v=1654266144177.css">
+
+
+    <script>
+        window.isPost = true
+        window.aomori = {
+            
+            
+            
+        }
+        window.aomori_logo_typed_animated = true
+        window.aomori_search_algolia = true
+
+    </script>
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Charlie's Coding Blog" type="application/atom+xml">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-METEEMBKHV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-METEEMBKHV');
+</script>
+
+<body>
+    
+    <a target="_blank" rel="noopener" href="https://github.com/charliee2000" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#353F4F; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    
+    <div class="container">
+    <header class="header">
+        <div class="header-type">
+            
+            <div class="header-type-avatar avatar avatar-sm">
+                <img src="/images/Neptune.png" alt="Charlie">
+            </div>
+            
+            <div class="header-type-inner">
+                
+                    <div id="typed-strings" style="display:none">
+                        <p>Charlie&#39;s Coding Blog</p>
+                    </div>
+                    <a class="header-type-title" id="typed" href="/"></a>
+                
+    
+                
+            </div>
+        </div>
+        <div class="header-menu">
+            <div class="header-menu-inner">
+                
+                <a href="/">Home</a>
+                
+                <a href="/archives">Archives</a>
+                
+                <a href="/about">About</a>
+                
+            </div>
+            <div class="header-menu-social">
+                
+    <a class="social" target="_blank" href="https://charliee2000.medium.com/">
+        <ion-icon name="logo-medium"></ion-icon>
+    </a>
+
+    <a class="social" target="_blank" href="https://charliee2000.github.io/atom.xml">
+        <ion-icon name="logo-rss"></ion-icon>
+    </a>
+
+            </div>
+        </div>
+
+        <div class="header-menu-mobile">
+            <div class="header-menu-mobile-inner" id="mobile-menu-open">
+                <i class="icon icon-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="header-menu-mobile-menu">
+        <div class="header-menu-mobile-menu-bg"></div>
+        <div class="header-menu-mobile-menu-wrap">
+            <div class="header-menu-mobile-menu-inner">
+                <div class="header-menu-mobile-menu-close" id="mobile-menu-close">
+                    <i class="icon icon-cross"></i>
+                </div>
+                <div class="header-menu-mobile-menu-list">
+                    
+                    <a href="/">Home</a>
+                    
+                    <a href="/archives">Archives</a>
+                    
+                    <a href="/about">About</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <div class="container">
+        <div class="main">
+            <section class="inner">
+                <section class="inner-main">
+                    <div class="post">
+    <article id="post-cl81qz42m0014cy2xejgd5qtf" class="article article-type-post" itemscope
+    itemprop="blogPost">
+
+    <div class="article-inner">
+        
+          
+        
+        
+        
+
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      [VPN] How to create an openvpn server with tp-link router and connect with smb server
+    </h1>
+  
+
+        </header>
+        
+
+        <div class="article-more-info article-more-info-post hairline">
+
+            <div class="article-date">
+  <time datetime="2022-09-14T13:03:52.000Z" itemprop="datePublished">2022-09-14</time>
+</div>
+
+            
+            <div class="article-category">
+                <a class="article-category-link" href="/categories/vpn/">vpn</a>
+            </div>
+            
+
+            
+            <div class="article-tag">
+                <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vpn/" rel="tag">vpn</a></li></ul>
+            </div>
+            
+
+            
+            <div class="article-busuanzi">
+                <span id="busuanzi_value_page_pv">N</span> 人看过
+            </div>
+            
+
+        </div>
+
+        <div class="article-entry post-inner-html hairline" itemprop="articleBody">
+            <p>本篇文章是記錄如何搭建<code>VPN Server</code>並透過<code>SMB連線</code>的方式存取電腦中的檔案</p>
+<p>非專業教學文，若有錯誤請留言告知，謝謝</p>
+<span id="more"></span>
+
+<h2 id="環境需求"><a href="#環境需求" class="headerlink" title="環境需求"></a>環境需求</h2><h3 id="搭建OS"><a href="#搭建OS" class="headerlink" title="搭建OS"></a>搭建OS</h3><ul>
+<li>Windows10</li>
+</ul>
+<h3 id="VPN軟體"><a href="#VPN軟體" class="headerlink" title="VPN軟體"></a>VPN軟體</h3><ul>
+<li>OpenVPN</li>
+</ul>
+<h3 id="硬體"><a href="#硬體" class="headerlink" title="硬體"></a>硬體</h3><ul>
+<li>TP-Link router一台</li>
+<li>任意可以聯網的裝置一台 (ex: iphone)</li>
+</ul>
+<hr>
+<h2 id="OpenVPN教學"><a href="#OpenVPN教學" class="headerlink" title="OpenVPN教學"></a><strong>OpenVPN教學</strong></h2><br>
+
+<h3 id="進入路由器後台"><a href="#進入路由器後台" class="headerlink" title="進入路由器後台"></a><strong>進入路由器後台</strong></h3><p>首先，先在瀏覽器上輸入網址</p>
+<p>192.168.0.1</p>
+<p>一般來說都是這個，如果要check的話可以透過Terminal下指令來取得</p>
+<h3 id="取得區域網路IP位置"><a href="#取得區域網路IP位置" class="headerlink" title="取得區域網路IP位置"></a>取得區域網路IP位置</h3><h4 id="Windows-Win-R-然後輸入-cmd-即可開啟Termial"><a href="#Windows-Win-R-然後輸入-cmd-即可開啟Termial" class="headerlink" title="Windows (Win + R, 然後輸入 cmd, 即可開啟Termial)"></a><strong>Windows</strong> (Win + R, 然後輸入 cmd, 即可開啟Termial)</h4><pre><code>ipconfig
+</code></pre>
+<h4 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a><strong>Mac</strong></h4><pre><code>ifconfig
+</code></pre>
+<br>
+
+<p><img src="/images/2022/image-20220914212147282.png" alt="image-20220914212147282"></p>
+<p>主要是看<code>預設閘道</code>的位置</p>
+<br>
+
+<p><img src="/images/2022/image-20220914212228565.png" alt="image-20220914212228565"></p>
+<p>輸入網址後會看到路由器的登入介面</p>
+<p>輸入你設定好的密碼</p>
+<br>
+
+<h3 id="Router開啟OpenVPN"><a href="#Router開啟OpenVPN" class="headerlink" title="Router開啟OpenVPN"></a><strong>Router開啟OpenVPN</strong></h3><p>Advanced -&gt; VPN Server -&gt; OpenVPN</p>
+<p><img src="/images/2022/image-20220914212953504.png" alt="image-20220914212953504"></p>
+<ul>
+<li>OpenVPN Enable 打勾</li>
+<li>Service Type選擇 <code>UDP</code></li>
+<li>Service Port 預設<code>1194</code>即可</li>
+<li>VPN Subnet 預設就好 不用更改</li>
+<li>Netmask 預設就好 不用更改</li>
+<li>Client Access <code>Home Network Only</code></li>
+</ul>
+<p>設定好之後先產生憑證，點擊 GENERATE</p>
+<p>大概會需要幾分鐘的時間</p>
+<p>之後點擊 EXPORT 匯出</p>
+<p>匯出之後會得到一個 <code>OpenVPN-Config.ovpn</code>檔案</p>
+<p>請妥善保存，這個是連線到你OpenVPN的鑰匙，不要任意外流</p>
+<p>然後按Save保存</p>
+<br>
+
+<h3 id="檢查-OpenVPN-Config-ovpn"><a href="#檢查-OpenVPN-Config-ovpn" class="headerlink" title="檢查 OpenVPN-Config.ovpn"></a><strong>檢查 OpenVPN-Config.ovpn</strong></h3><p>使用文本編輯器打開該檔案，要確認一下內容是否正確</p>
+<p><img src="/images/2022/image-20220914213813124.png" alt="image-20220914213813124"></p>
+<p>確認一下你家的IP位置是否正確</p>
+<p>可以透過以下網址來查詢你家的IP位置</p>
+<p><a target="_blank" rel="noopener" href="https://nordvpn.com/zh-tw/ip-lookup/">https://nordvpn.com/zh-tw/ip-lookup/</a></p>
+<p><strong>如果不正確，請把IP位置修正</strong></p>
+<br>
+
+<h3 id="開啟Port-Forwarding"><a href="#開啟Port-Forwarding" class="headerlink" title="開啟Port Forwarding"></a><strong>開啟Port Forwarding</strong></h3><p>Advanced -&gt; NAT Forwarding -&gt; Port Forwarding</p>
+<p>新增一個 <code>Forwarding Port</code> 點 Add</p>
+<img src="/images/2022/image-20220914214338386.png" alt="image-20220914214338386" style="zoom:80%;" />
+
+<ul>
+<li>Service Name 隨意打 (ex : VPN伺服器)</li>
+<li>Device IP Address <strong><code>IPv4的IP位置</code></strong><ul>
+<li>可以參考 <a href="https://charliee2000.github.io/2022/09/14/20220914/#%E5%8F%96%E5%BE%97%E5%8D%80%E5%9F%9F%E7%B6%B2%E8%B7%AFIP%E4%BD%8D%E7%BD%AE">取得區域網路IP位置</a></li>
+<li>也可以點 <code>VIEW CONNECTED DEVICES</code> 按鈕，會列出目前有連線的IP位置</li>
+</ul>
+</li>
+<li>External Port 輸入<strong>1194</strong></li>
+<li>Internal Port 輸入 <strong>1194</strong></li>
+<li>Protocol <strong><code>All</code></strong></li>
+</ul>
+<p>完成之後按Save即可</p>
+<p><strong>注意！！如果你家是兩台 一台數據機+一台WIFI分享的路由器</strong></p>
+<p><strong>那你必須兩台都把Forwarding port都設定過才行</strong></p>
+<br>
+
+<br>
+
+<h3 id="Windows安裝OpenVPN-Server"><a href="#Windows安裝OpenVPN-Server" class="headerlink" title="Windows安裝OpenVPN Server"></a><strong>Windows安裝OpenVPN Server</strong></h3><br>
+
+<p>從以下網址下載OpenVPN Server的安裝檔</p>
+<p><a target="_blank" rel="noopener" href="https://openvpn.net/community-downloads/">https://openvpn.net/community-downloads/</a></p>
+<br>
+
+<p>安裝完成之後啟動</p>
+<p><img src="/images/2022/image-20220914215843135.png" alt="image-20220914215843135"></p>
+<p>可以在右下角看到OpenVPN的圖示</p>
+<br>
+
+<h4 id="匯入openvpn設定檔"><a href="#匯入openvpn設定檔" class="headerlink" title="匯入openvpn設定檔"></a><strong>匯入openvpn設定檔</strong></h4><p><img src="/images/2022/image-20220914220137521.png" alt="image-20220914220137521"></p>
+<p>對OpenVPN的圖示 點右鍵 -&gt; 匯入設定檔</p>
+<p>還記得剛剛下載的 <code>OpenVPN-Config.ovpn</code></p>
+<p>找到該檔案後把他匯入進去</p>
+<br>
+
+<h3 id="連線至OpenVPN"><a href="#連線至OpenVPN" class="headerlink" title="連線至OpenVPN"></a><strong>連線至OpenVPN</strong></h3><p><img src="/images/2022/image-20220914220332839.png" alt="image-20220914220332839"></p>
+<p>一樣點選圖示 按右鍵 -&gt; 點<code>連線</code></p>
+<br>
+
+<img src="/images/2022/image-20220914220505730.png" alt="image-20220914220505730" style="zoom:50%;" />
+
+<p>成功的話會跳出連線成功的通知</p>
+<br>
+
+<h3 id="使用裝置連線至VPN-Server"><a href="#使用裝置連線至VPN-Server" class="headerlink" title="使用裝置連線至VPN Server"></a><strong>使用裝置連線至VPN Server</strong></h3><p>到這邊為止 OpenVPN已經架設完成了</p>
+<p>接著要用可以聯網的裝置連線至VPN Server</p>
+<p>這邊使用的是iphone11</p>
+<img src="/images/2022/IMG_423FAC95ABA6-1.jpeg" alt="IMG_423FAC95ABA6-1" style="zoom:50%;" />
+
+<p>先下載OpenVPN的APP (也有windows版跟mac版)</p>
+<br>
+
+<img src="/images/2022/IMG_BC307EA37432-1.jpeg" alt="IMG_BC307EA37432-1" style="zoom:50%;" />
+
+<p>開啟OpenVPN</p>
+<p>按下 + 新增一個VPN位置，這邊選擇右邊的 <code>FILE</code></p>
+<p>一樣，這裡需要匯入 <code>OpenVPN-Config.ovpn</code></p>
+<p><strong>可以透過email寄送到自己的信箱在取出來匯入即可</strong></p>
+<br>
+
+<h4 id="連線至VPN-Server"><a href="#連線至VPN-Server" class="headerlink" title="連線至VPN_Server"></a>連線至VPN_Server</h4><img src="/images/2022/image-20220914221419314.png" alt="image-20220914221419314" style="zoom:50%;" />
+
+<p>然後打開開關，成功的話則會顯示 CONNECTED</p>
+<br>
+
+<hr>
+<h2 id="Windows設置SMB-網路的芳鄰"><a href="#Windows設置SMB-網路的芳鄰" class="headerlink" title="Windows設置SMB(網路的芳鄰)"></a><strong>Windows設置SMB(網路的芳鄰)</strong></h2><br>
+
+<h3 id="選擇共享資料夾"><a href="#選擇共享資料夾" class="headerlink" title="選擇共享資料夾"></a><strong>選擇共享資料夾</strong></h3><br>
+
+<p>選擇你要共享的資料夾</p>
+<img src="/images/2022/image-20220914221839656.png" alt="image-20220914221839656" style="zoom:50%;" />
+
+<p>點右鍵 -&gt; 內容 -&gt; 共用 -&gt; 共用</p>
+<br>
+
+<p><img src="/images/2022/image-20220914221932028.png" alt="image-20220914221932028"></p>
+<p>然後選擇共用即可</p>
+<br>
+
+<p><img src="/images/2022/image-20220914222114541.png" alt="image-20220914222114541"></p>
+<p>如果你要<strong>讓所有人都可以存取</strong>這個資料夾的話</p>
+<p>那則可以新增一個<code>everyone</code>的使用者</p>
+<br>
+
+<p><img src="/images/2022/image-20220914222216600.png" alt="image-20220914222216600"></p>
+<p>最後點選 <code>共用</code> 即可</p>
+<p><br><br></p>
+<h3 id="使用APP開啟SMB資料夾"><a href="#使用APP開啟SMB資料夾" class="headerlink" title="使用APP開啟SMB資料夾"></a><strong>使用APP開啟SMB資料夾</strong></h3><p>這邊示範的是用iphone</p>
+<p>下載APP <a target="_blank" rel="noopener" href="https://apps.apple.com/tw/app/infuse-7/id1136220934">infuse</a></p>
+<p><strong><a href="https://charliee2000.github.io/2022/09/14/20220914/#%E9%80%A3%E7%B7%9A%E8%87%B3VPN_Server">先用OpenVPN連線至VPN Server</a></strong></p>
+<p>然後開啟APP</p>
+<br>
+
+<img src="/images/2022/IMG_3AF2AE7CAF7A-1.jpeg" alt="IMG_3AF2AE7CAF7A-1" style="zoom:50%;" />
+
+<p>選擇 <code>新增SMB</code></p>
+<br>
+
+<img src="/images/2022/IMG_71FF1F0B5BEA-1.jpeg" alt="IMG_71FF1F0B5BEA-1" style="zoom:50%;" />
+
+<ul>
+<li>分享名稱 隨意即可</li>
+<li>通訊協定 <code>SMB</code></li>
+<li>Address 區網位置<ul>
+<li>可以參考 <a href="https://charliee2000.github.io/2022/09/14/20220914/#%E5%8F%96%E5%BE%97%E5%8D%80%E5%9F%9F%E7%B6%B2%E8%B7%AFIP%E4%BD%8D%E7%BD%AE">取得區域網路IP位置</a></li>
+</ul>
+</li>
+<li>使用者名稱 &amp; 密碼<ul>
+<li>可以打你window專用的<code>登入帳號</code> 跟 <code>密碼</code><ul>
+<li>可以拿到最高權限</li>
+</ul>
+</li>
+<li>也可以打everyone<ul>
+<li><strong>everyone的話就不用輸入密碼</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>然後點 <strong>新增</strong></p>
+<br>
+
+<img src="/images/2022/image-20220914223331251.png" alt="image-20220914223331251" style="zoom:50%;" />
+
+<p>這樣就可以看到剛剛新增好的SMB連線了</p>
+<p>點擊進入即可瀏覽檔案</p>
+<br>
+
+<h3 id="透過連結存取SMB"><a href="#透過連結存取SMB" class="headerlink" title="透過連結存取SMB"></a><strong>透過連結存取SMB</strong></h3><br>
+
+<h4 id="Mac-1"><a href="#Mac-1" class="headerlink" title="Mac"></a><strong>Mac</strong></h4><p>Mac的話其實可以直接透過</p>
+<p>smb:&#x2F;&#x2F;你的區網IP 的方式來存取SMB資料夾</p>
+<p>ex : smb:&#x2F;&#x2F;192.168.1.100</p>
+<p>輸入到瀏覽器 or 支援SMB連線的<code>應用程式</code>即可</p>
+<br>
+
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a><strong>Windows</strong></h4><p>透過網路的芳鄰存取即可</p>
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<nav class="article-nav">
+  
+  
+    <a href="/2022/09/05/20220905-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-caption">precedente</div>
+      <div class="article-nav-title">[Java] Examples for javax.ws.rs.client.ClientBuilder</div>
+    </a>
+  
+</nav>
+
+
+    <section class="share">
+        <div class="share-title">share</div>
+        <a class="share-item" target="_blank"
+            href="https://twitter.com/share?text=[VPN] How to create an openvpn server with tp-link router and connect with smb server - Charlie's Coding Blog&url=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F09%2F14%2F20220914%2F">
+            <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+        <a class="share-item" target="_blank"
+            href="https://www.facebook.com/sharer.php?title=[VPN] How to create an openvpn server with tp-link router and connect with smb server - Charlie's Coding Blog&u=https%3A%2F%2Fcharliee2000.github.io%2F2022%2F09%2F14%2F20220914%2F">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <!-- <a class="share-item" target="_blank"
+            href="https://service.weibo.com/share/share.php?title=[VPN] How to create an openvpn server with tp-link router and connect with smb server - Charlie's Coding Blog&url=https://charliee2000.github.io/2022/09/14/20220914/&pic=">
+            <div class="n-icon n-icon-weibo"></div>
+        </a> -->
+    </section>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://utteranc.es/client.js"
+        repo="charliee2000/charliee2000.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+
+
+
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</div>
+                </section>
+            </section>
+
+            
+            <aside class="sidebar sidebar-search-fix">
+                
+
+    <div class="search">
+    <div class="has-icon-right">
+        <input type="text" class="form-input" id="search" placeholder="SEARCH" autocomplete="off">
+        <div class="form-icon">
+            <ion-icon name="search"></ion-icon>
+        </div>
+    </div>
+    <div class="search-result" id="search-ps"></div>
+</div>
+
+<div class="widget" id="widget">
+    
+      
+  <div class="widget-wrap">
+    <div class="widget-inner">
+      <div class="toc post-toc-html"></div>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-cate">
+    <div class="widget-title"><span>Categories</span></div>
+    <div class="widget-inner">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome/">Chrome</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Notion/">Notion</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/vpn/">vpn</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-tags">
+    <div class="widget-title"><span>Tags</span></div>
+    <div class="widget-inner">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chrome/" rel="tag">Chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Keep/" rel="tag">Google Keep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/" rel="tag">Mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mermaid/" rel="tag">Mermaid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Notion/" rel="tag">Notion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/comments/" rel="tag">comments</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eclipse/" rel="tag">eclipse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exception/" rel="tag">exception</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rss/" rel="tag">rss</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonarlint/" rel="tag">sonarlint</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap widget-recent-posts">
+    <div class="widget-title"><span>Recent Posts</span></div>
+    <div class="widget-inner">
+      <ul>
+        
+          <li>
+            <a href="/2022/09/14/20220914/">[VPN] How to create an openvpn server with tp-link router and connect with smb server</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/05/20220905-2/">[Java] Examples for javax.ws.rs.client.ClientBuilder</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/05/20220905/">[Hexo] How to add github corners in hexo blog</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/02/20220902-3/">[Chrome] 11 Best Google Chrome Extensions in 2022</a>
+          </li>
+        
+          <li>
+            <a href="/2022/09/02/20220902-2/">[Java] How to use decompile tool (jd-gui) and install it into eclipse</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget-wrap widget-archive">
+    <div class="widget-title"><span>Archive</span></div>
+    <div class="widget-inner">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
+    </div>
+  </div>
+
+
+    
+</div>
+
+<div id="backtop"><i class="icon icon-arrow-up"></i></div>
+
+<div class="buy-me-coffee">
+    <a target="_blank" rel="noopener" href="https://www.buymeacoffee.com/charliee2000"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=charliee2000&button_colour=ffffff&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=FFDD00" /></a>
+</div>
+
+            </aside>
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3c4859" fill-opacity="1" d="M0,160L60,181.3C120,203,240,245,360,240C480,235,600,181,720,186.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    </div>
+
+    <!-- Please do not remove this -->
+    <!-- 开源不易，请勿删除 -->
+    <div class="footer-wrap">
+        <div class="footer-inner"> 
+            Charlie&#39;s Coding Blog &copy; 2022<br>
+            Powered By Hexo · Theme By <a href="https://linhong.me/" target="_blank">Aomori</a> · <a href="https://github.com/lh1me/hexo-theme-aomori" target="_blank">Github</a>
+        </div>
+    </div>
+
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@6.0.2/dist/ionicons/ionicons.esm.js"></script>
+
+
+
+
+
+
+<script src="/dist/build.js?1654266144177.js"></script>
+
+
+<script src="/dist/custom.js?1654266144177.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
