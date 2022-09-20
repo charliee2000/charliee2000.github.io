@@ -187,7 +187,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl884usc0000nz7um08i66xrb" class="article article-type-post" itemscope
+    <article id="post-cl8a0wi1c000nx32x4acrbhoi" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -567,6 +567,36 @@
 
 <script src="/dist/custom.js?1654266144177.js"></script>
 
+
+
+<script src="/javascripts/L2Dwidget.min.js"></script>
+
+
+<script src="/javascripts/L2Dwidget.0.min.js"></script>
+
+<script type="text/javascript">
+    L2Dwidget.init({
+        "model": {
+            "jsonPath": 'https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json',
+        },
+        "dialog": {
+            "enable": false,
+            "script": {
+                //每20s，显示一言（调用一言Api返回的句子）
+                'every idle 20s': '$hitokoto$',
+                //触摸到身体
+                'tap body': '我要報警了！',
+                //触摸到头部
+                'tap face': '不要亂摸~~~'
+          }
+        },
+        "display": {
+            'position': 'left',
+            'hOffset': 50,
+            'vOffset': -95
+        }
+    });
+</script>
 
 
 
