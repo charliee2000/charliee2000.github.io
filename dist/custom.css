@@ -1417,6 +1417,26 @@ img:not([src]):not([srcset]) {
 }
 
 @media screen and (max-width:600px) {
+	.github-corner {
+		display: none
+	}
+
+	#live2d-widget {
+		display: none
+	}
+
+	.search {
+		display: none
+	}
+
+	#widget {
+		display: none
+	}
+
+	.sidebar-fixed {
+		padding: 0;
+	}
+
 	.header .header-menu {
 		display: none
 	}
@@ -1484,6 +1504,26 @@ img:not([src]):not([srcset]) {
 }
 
 @media screen and (max-width:800px) {
+	.github-corner {
+		display: none
+	}
+
+	#live2d-widget {
+		display: none
+	}
+
+	.search {
+		display: none
+	}
+
+	#widget {
+		display: none
+	}
+
+	.sidebar-fixed {
+		padding: 0;
+	}
+
 	.main .inner {
 		padding-right: 0
 	}
@@ -1513,6 +1553,26 @@ img:not([src]):not([srcset]) {
 }
 
 @media screen and (max-width:1140px) {
+	.github-corner {
+		display: none
+	}
+
+	#live2d-widget {
+		display: none
+	}
+
+	.search {
+		display: none
+	}
+
+	#widget {
+		display: none
+	}
+
+	.sidebar-fixed {
+		padding: 0;
+	}
+
 	.sidebar {
 		right: 20px
 	}
