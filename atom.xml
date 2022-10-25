@@ -6,7 +6,7 @@
   <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
   
   <link href="https://charliee2000.github.io/"/>
-  <updated>2022-09-19T02:14:58.608Z</updated>
+  <updated>2022-10-25T03:05:42.940Z</updated>
   <id>https://charliee2000.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Java] How to zip multiple file to zip file</title>
+    <link href="https://charliee2000.github.io/2022/10/25/202201025/"/>
+    <id>https://charliee2000.github.io/2022/10/25/202201025/</id>
+    <published>2022-10-25T02:25:41.000Z</published>
+    <updated>2022-10-25T03:05:42.940Z</updated>
+    
+    <content type="html"><![CDATA[<p>Using javax.io example</p><br><span id="more"></span><h2 id="1-Dependency"><a href="#1-Dependency" class="headerlink" title="1. Dependency"></a>1. Dependency</h2><pre><code class="xml">&lt;dependency&gt;  &lt;groupId&gt;commons-io&lt;/groupId&gt;  &lt;artifactId&gt;commons-io&lt;/artifactId&gt;  &lt;version&gt;2.11.0&lt;/version&gt;&lt;/dependency&gt;</code></pre><br><h2 id="2-Exmaple"><a href="#2-Exmaple" class="headerlink" title="2. Exmaple"></a>2. Exmaple</h2><h3 id="Java-code"><a href="#Java-code" class="headerlink" title="Java code"></a>Java code</h3><pre><code class="java">public static void zipMultipleFiles() throws IOException &#123;        File newFile = new File(&quot;demo.zip&quot;);        // get demo file list        List&lt;File&gt; demoByteToFileList = demoFileList();        FileOutputStream fos = new FileOutputStream(newFile);        ZipOutputStream zipOut = new ZipOutputStream(fos);        for (File demoFile : demoByteToFileList) &#123;            FileInputStream fis = new FileInputStream(demoFile);            ZipEntry zipEntry = new ZipEntry(demoFile.getName());            zipOut.putNextEntry(zipEntry);            byte[] bytes = new byte[1024];            int length;            while ((length = fis.read(bytes)) &gt;= 0) &#123;                zipOut.write(bytes, 0, length);            &#125;            fis.close();        &#125;        zipOut.close();        fos.close();&#125;public static List&lt;File&gt; demoFileList() throws IOException &#123;        // demo01        List&lt;File&gt; files = new ArrayList&lt;File&gt;();        byte[] bytes = Files.readAllBytes(Paths.get(&quot;/Users/charlie/Pictures/Temp/demo01.png&quot;));        File tempFile = new File(&quot;demo01.png&quot;);        FileUtils.writeByteArrayToFile(tempFile, bytes);        System.out.println(tempFile.getAbsolutePath());        // demo02        byte[] bytes2 = Files.readAllBytes(Paths.get(&quot;/Users/charlie/Pictures/Temp/demo02.png&quot;));        File tempFile2 = new File(&quot;demo02.png&quot;);        FileUtils.writeByteArrayToFile(tempFile2, bytes2);        System.out.println(tempFile2.getAbsolutePath());        files.add(tempFile);        files.add(tempFile2);        return files;&#125;</code></pre><br><h3 id="Run-console"><a href="#Run-console" class="headerlink" title="Run console"></a>Run console</h3><pre><code>/Users/charlie/Java/code-java/java-demo/demo01.png/Users/charlie/Java/code-java/java-demo/demo02.png</code></pre><br><h3 id="Result-image"><a href="#Result-image" class="headerlink" title="Result image"></a>Result image</h3><p><img src="/images/2022/image-20221025110004714.png" alt="image-20221025110004714"></p><br><h2 id="3-Source-Code"><a href="#3-Source-Code" class="headerlink" title="3. Source Code"></a>3. Source Code</h2><pre><code>git clone https://github.com/charliee2000/code-java.git</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Using javax.io example&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="java" scheme="https://charliee2000.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://charliee2000.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>[VPN] How to create an openvpn server with tp-link router on windows os and connect to smb server with your device</title>
