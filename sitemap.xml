@@ -8,6 +8,15 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/2022/09/02/20220902/</loc>
+    
+    <lastmod>2022-10-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/2022/10/25/202201025/</loc>
     
     <lastmod>2022-10-25</lastmod>
@@ -143,15 +152,6 @@
   </url>
   
   <url>
-    <loc>https://charliee2000.github.io/2022/09/02/20220902/</loc>
-    
-    <lastmod>2022-09-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://charliee2000.github.io/2022/08/31/20220831/</loc>
     
     <lastmod>2022-09-02</lastmod>
@@ -194,13 +194,6 @@
   
   <url>
     <loc>https://charliee2000.github.io/tags/blog/</loc>
-    <lastmod>2022-10-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://charliee2000.github.io/tags/comments/</loc>
     <lastmod>2022-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -285,6 +278,13 @@
   
   <url>
     <loc>https://charliee2000.github.io/tags/test/</loc>
+    <lastmod>2022-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/tags/comments/</loc>
     <lastmod>2022-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
