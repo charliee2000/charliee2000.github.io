@@ -6,7 +6,7 @@
   <link href="https://charliee2000.github.io/atom.xml" rel="self"/>
   
   <link href="https://charliee2000.github.io/"/>
-  <updated>2022-10-25T03:05:42.940Z</updated>
+  <updated>2022-10-26T05:46:02.191Z</updated>
   <id>https://charliee2000.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Tool] Using ngrok tunnel create a temporary local server</title>
+    <link href="https://charliee2000.github.io/2022/10/26/202201026-2/"/>
+    <id>https://charliee2000.github.io/2022/10/26/202201026-2/</id>
+    <published>2022-10-26T04:47:37.000Z</published>
+    <updated>2022-10-26T05:46:02.191Z</updated>
+    
+    <content type="html"><![CDATA[<p>偶爾會有一些狀況會需要在local的機器架設伺服器</p><p>但是要讓其他人可以透過外網連入你的機器</p><p>需要完成很多的前置條件才能達成</p><p>這時候就可以透過<code>ngrok</code>來搭建一個暫時的通道來處理</p><br><span id="more"></span><h1 id="下載ngrok"><a href="#下載ngrok" class="headerlink" title="下載ngrok"></a><strong>下載ngrok</strong></h1><br><p>官方網址：<a href="https://ngrok.com/">https://ngrok.com/</a></p><img src="/images/2022/image-20221026125732321.png" alt="image-20221026125732321" style="zoom:67%;" /><p>根據你使用的系統來下載相對應的ngrok</p><br><h1 id="註冊帳號"><a href="#註冊帳號" class="headerlink" title="註冊帳號"></a><strong>註冊帳號</strong></h1><br><p>這邊會建議註冊一下ngrok的帳號</p><p>這樣可以增加你的連線使用次數上限</p><img src="/images/2022/image-20221026125908942.png" alt="image-20221026125908942" style="zoom:67%;" /><p>可以直接透過google or github註冊即可</p><br><h1 id="取得登入token"><a href="#取得登入token" class="headerlink" title="取得登入token"></a>取得登入token</h1><br><p>註冊成功並且在官網登入</p><p>可以在 Setup &amp; Installation 取得登入的token</p><p><img src="/images/2022/image-20221026131519044.png" alt="image-20221026131519044"></p><p>複製該行</p><br><h1 id="登入ngrok"><a href="#登入ngrok" class="headerlink" title="登入ngrok"></a><strong>登入ngrok</strong></h1><br><p>這邊以mac系統為例</p><p>解壓縮剛剛下載好的檔案得到一個ngrok檔案</p><p>打開terminal並輸入剛剛複製好的指令就可以登入了</p><p><img src="/images/2022/image-20221026131824483.png" alt="image-20221026131824483"></p><br><h1 id="啟動ngrok"><a href="#啟動ngrok" class="headerlink" title="啟動ngrok"></a><strong>啟動ngrok</strong></h1><pre><code>ngrok http 8000</code></pre><p><img src="/images/2022/image-20221026132852455.png" alt="image-20221026132852455"></p><p>這樣就啟動了</p><p>該串就是你local端暫時的domain</p><br><h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a><strong>Demo</strong></h1><br><p>這邊直接透過python的SimpleHTTPServer直接簡單架設一個html靜態網頁</p><pre><code>python3 -m http.server 8000</code></pre><p>打上網址</p><p><img src="/images/2022/image-20221026132949285.png" alt="image-20221026132949285"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;偶爾會有一些狀況會需要在local的機器架設伺服器&lt;/p&gt;
+&lt;p&gt;但是要讓其他人可以透過外網連入你的機器&lt;/p&gt;
+&lt;p&gt;需要完成很多的前置條件才能達成&lt;/p&gt;
+&lt;p&gt;這時候就可以透過&lt;code&gt;ngrok&lt;/code&gt;來搭建一個暫時的通道來處理&lt;/p&gt;
+&lt;br&gt;</summary>
+    
+    
+    
+    <category term="tool" scheme="https://charliee2000.github.io/categories/tool/"/>
+    
+    
+    <category term="ngrok" scheme="https://charliee2000.github.io/tags/ngrok/"/>
+    
+  </entry>
   
   <entry>
     <title>[Java] How to zip multiple file to zip file</title>
@@ -164,7 +189,7 @@
     <link href="https://charliee2000.github.io/2022/09/02/20220902/"/>
     <id>https://charliee2000.github.io/2022/09/02/20220902/</id>
     <published>2022-09-02T02:42:58.000Z</published>
-    <updated>2022-10-26T02:23:20.750Z</updated>
+    <updated>2022-10-26T03:18:43.681Z</updated>
     
     <content type="html"><![CDATA[<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在使用JBoss resteasy呼叫api的時候出現</p><p><code>javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure</code></p><p>查了資料後發現，會出現這個原因是應該是因為Client端跟Server端的協議版本不一至導致</p><br><span id="more"></span><h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><p>先安裝一下nmap</p><pre><code>brew install nmap</code></pre><p>nmap是一款網路的安全工具</p><p>官方介紹：</p><blockquote><p>Nmap (“Network Mapper”) is a <a href="https://nmap.org/npsl/">free and open source</a> utility for network discovery and security auditing.</p></blockquote><br><p>這邊我用來檢查server端的協議版本</p><pre><code>nmap --script ssl-enum-ciphers -p 443 你的server端位置Starting Nmap 7.92 ( &lt;https://nmap.org&gt; ) at 2022-09-02 09:50 CSTNmap scan report for 你的server端位置Host is up (0.10s latency).Other addresses for 你的server端位置PORT    STATE SERVICE443/tcp open  https| ssl-enum-ciphers:|   TLSv1.0:|   TLSv1.1:|_  TLSv1.2:</code></pre><p>看起來是支援TLS1.0, TLS1.1, TLS1.2</p><br><p>接著看一下client端用的協議版本</p><p>在java code中加入</p><pre><code class="java">System.setProperty(&quot;javax.net.debug&quot;, &quot;all&quot;);</code></pre><br><p>再次呼叫之後可以看到以下某一行的輸出</p><pre><code>...Thread-1, WRITE: SSLv2 client hello message, length = 110...</code></pre><p>看起來是client端有上使用到SSLv2的協議版本</p><p>但是server端不支援</p><p>因為專案的項目是使用jdk6</p><p>更換成jdk7後就沒問題了</p><br><hr><h2 id="更新：2022-x2F-10-x2F-25"><a href="#更新：2022-x2F-10-x2F-25" class="headerlink" title="更新：2022&#x2F;10&#x2F;25"></a><strong>更新：2022&#x2F;10&#x2F;25</strong></h2><br><h3 id="其他問題"><a href="#其他問題" class="headerlink" title="其他問題"></a><strong>其他問題</strong></h3><p>後來還是有遇到其他jdk ssl協定版本不同的問題</p><p>只能透過另一種方式處理</p><br><h3 id="hostnameVerifier"><a href="#hostnameVerifier" class="headerlink" title="hostnameVerifier"></a><strong>hostnameVerifier</strong></h3><p>這邊使用的是Resteasy的API操作</p><p>可以參考以下<a href="https://charliee2000.github.io/2022/09/05/20220905-2/">這篇</a></p><p>在透過ClientBuilder產生Client的實體的時候</p><p>複寫HostnameVerifier的verify</p><br><h4 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h4><pre><code class="java">// skip host name validateSSLContext sslcontext = SSLContext.getInstance(&quot;TLS&quot;);sslcontext.init(null, new TrustManager[] &#123; new X509TrustManager() &#123;  public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;  &#125;  public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;  &#125;  public X509Certificate[] getAcceptedIssuers() &#123;    return new X509Certificate[0];  &#125;&#125; &#125;, new java.security.SecureRandom());HostnameVerifier allowAll = new HostnameVerifier() &#123;  @Override  public boolean verify(String hostname, SSLSession session) &#123;    return true;  &#125;&#125;;Client client = ClientBuilder.newBuilder().sslContext(sslcontext).hostnameVerifier(allowAll).build();</code></pre><br><hr><h2 id="參考資訊"><a href="#參考資訊" class="headerlink" title="參考資訊"></a>參考資訊</h2><ul><li>oracle<ul><li><a href="https://www.oracle.com/java/technologies/java-archive-downloads-java-plat-downloads.html#jce_policy-6-oth-JPR">jce1.6下載</a></li></ul></li><li>blog<ul><li><a href="https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html">https://villebez.blogspot.com/2018/03/jdk16-sslhandshakeexception.html</a></li><li><a href="https://blog.csdn.net/keyi__/article/details/122842356">https://blog.csdn.net/keyi__/article/details/122842356</a></li><li><a href="https://www.jianshu.com/p/acbfea5ec597">https://www.jianshu.com/p/acbfea5ec597</a></li></ul></li><li>stackoverflow<ul><li><a href="https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception">https://stackoverflow.com/questions/6353849/received-fatal-alert-handshake-failure-through-sslhandshakeexception</a></li></ul></li><li>other<ul><li><a href="https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/">https://itecnote.com/tecnote/java-apache-httpclient-use-own-ssl-certificates/</a></li></ul></li></ul>]]></content>
     

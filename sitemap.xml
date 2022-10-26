@@ -8,6 +8,15 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/2022/10/26/202201026-2/</loc>
+    
+    <lastmod>2022-10-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/2022/09/02/20220902/</loc>
     
     <lastmod>2022-10-26</lastmod>
@@ -186,6 +195,13 @@
   </url>
   
   <url>
+    <loc>https://charliee2000.github.io/tags/ngrok/</loc>
+    <lastmod>2022-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://charliee2000.github.io/tags/hexo/</loc>
     <lastmod>2022-10-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -294,6 +310,13 @@
   
   <url>
     <loc>https://charliee2000.github.io/categories/java/</loc>
+    <lastmod>2022-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://charliee2000.github.io/categories/tool/</loc>
     <lastmod>2022-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
