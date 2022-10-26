@@ -197,7 +197,7 @@
             <section class="inner">
                 <section class="inner-main">
                     <div class="post">
-    <article id="post-cl9nqqz67000qca85aoos3owk" class="article article-type-post" itemscope
+    <article id="post-cl9p0muyp000wce85cuwh0jg6" class="article article-type-post" itemscope
     itemprop="blogPost">
 
     <div class="article-inner">
@@ -313,40 +313,28 @@ Thread-1, WRITE: SSLv2 client hello message, length = 110
 <p>複寫HostnameVerifier的verify</p>
 <br>
 
-<h4 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h4><pre><code class="java">public &lt;T&gt; T post(Object requestVO, String postUrl, Class&lt;T&gt; responseType)
-        throws KeyManagementException, NoSuchAlgorithmException &#123;
-    // skip host name validate
-    SSLContext sslcontext = SSLContext.getInstance(&quot;TLS&quot;);
-    sslcontext.init(null, new TrustManager[] &#123; new X509TrustManager() &#123;
+<h4 id="Java-Code"><a href="#Java-Code" class="headerlink" title="Java Code"></a>Java Code</h4><pre><code class="java">// skip host name validate
+SSLContext sslcontext = SSLContext.getInstance(&quot;TLS&quot;);
+sslcontext.init(null, new TrustManager[] &#123; new X509TrustManager() &#123;
 
-        public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;
-        &#125;
+  public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;
+  &#125;
 
-        public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;
-        &#125;
+  public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException &#123;
+  &#125;
 
-        public X509Certificate[] getAcceptedIssuers() &#123;
-        return new X509Certificate[0];
-        &#125;
-    &#125; &#125;, new java.security.SecureRandom());
-    HostnameVerifier allowAll = new HostnameVerifier() &#123;
+  public X509Certificate[] getAcceptedIssuers() &#123;
+    return new X509Certificate[0];
+  &#125;
+&#125; &#125;, new java.security.SecureRandom());
+HostnameVerifier allowAll = new HostnameVerifier() &#123;
 
-        @Override
-        public boolean verify(String hostname, SSLSession session) &#123;
-        return true;
-        &#125;
-    &#125;;
-    Client client = ClientBuilder.newBuilder().sslContext(sslcontext).hostnameVerifier(allowAll).build();
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    String json = gson.toJson(requestVO);
-    Entity&lt;String&gt; entity = Entity.entity(json, MediaType.APPLICATION_JSON);
-    Response response = client.target(postUrl).request(MediaType.APPLICATION_JSON).post(entity);
-    System.out.println(response.getEntity());
-    String jsonRtn = response.readEntity(String.class);
-    System.out.println(jsonRtn);
-    T responseVO = gson.fromJson(jsonRtn, responseType);
-    return responseVO;
-&#125;
+  @Override
+  public boolean verify(String hostname, SSLSession session) &#123;
+    return true;
+  &#125;
+&#125;;
+Client client = ClientBuilder.newBuilder().sslContext(sslcontext).hostnameVerifier(allowAll).build();
 </code></pre>
 <br>
 
